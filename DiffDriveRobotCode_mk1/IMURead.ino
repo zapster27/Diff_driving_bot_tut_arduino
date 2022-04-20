@@ -1,8 +1,10 @@
 MPU6050 mpu;
 extern float aX, aY, aZ, gX, gY, gZ;
 float aXStart,aYStart, aZStart, gXStart, gYStart, gZStart;
+
 Vector normAccel;
 Vector normGyro;
+
 void IMUInit(){
   Serial.println("Initialize MPU6050");
 
