@@ -73,7 +73,7 @@ void setup() {
 
   EncoderInit();
   Serial.println("Encoder initialized");
-
+  initRosPub();
   nh.initNode();
   nh.advertise(ArduinoData);
   nh.advertise(StateMsg);
@@ -101,6 +101,7 @@ void loop() {
     state_msg.data[3] = VX;
     state_msg.data[4] = W;
     state_msg.data[5] = W;
+    StateMsg.publish( &str_msg );
 
     oldMillis = millis();
     ArduinoData.publish( &str_msg );
