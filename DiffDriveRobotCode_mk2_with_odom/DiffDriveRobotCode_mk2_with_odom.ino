@@ -6,24 +6,25 @@
 
 
 #include <ros.h>
-#include <std_msgs/String.h>
-#include <std_msgs/Empty.h>
+#include <tf/tf.h>
 #include <geometry_msgs/Twist.h>
-#include <std_msgs/Float32MultiArray.h>
+#include <nav_msgs/Odometry.h>
 
 ros::NodeHandle  nh;
-std_msgs::Float32MultiArray  state_msg;
-std_msgs::MultiArrayDimension myDim;
-
-ros::Publisher StateMsg("StateMsg", &state_msg);
+nav_msgs::Odometry odom;
+ros::Publisher odom_publisher("odom", &odom);
 
 
 float X = 0;
 float Y = 0;
 float Theta = 0;
 
+float QX = 0;
+float QY = 0;
+float QZ = 0;
+float QW = 0;
+
 float VX = 0;
-float VY = 0;
 float W = 0;
 double DT = 0;
 
@@ -49,32 +50,27 @@ void cmd_vel_cb(const geometry_msgs::Twist & msg) {
 
 char label[] =  "test";
 int array_size = 6;
-void initRosPub() {
-  myDim.label = label;
-  myDim.size = array_size;
-  myDim.stride = 1 * array_size;
-  state_msg.layout.data_offset = 0;
-  state_msg.layout.dim[0] = myDim;
-  state_msg.data_length = array_size;
-  state_msg.data = (float *)malloc(sizeof(float) * array_size);
-}
+
 
 ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel", cmd_vel_cb);
+
+template <typename type>
+type sign(type value) {
+    return type((value>0)-(value<0));
+}
 
 void setup() {
   Serial.begin(115200);
   Serial.println("Starting init...");
 
-//  IMUInit();
+  //  IMUInit();
   Serial.println("IMU initialized");
   oldMillis = millis();
 
   EncoderInit();
   Serial.println("Encoder initialized");
-  initRosPub();
   nh.initNode();
-  nh.advertise(ArduinoData);
-  nh.advertise(StateMsg);
+  nh.advertise(odom_publisher);
   Serial.println("Advertising Topics");
 
   delay(500);
@@ -84,7 +80,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   if (millis() - oldMillis >= 100) {
-//    readData();
+    //    readData();
 
 
     //    int str_len = msg.length() + 1;
@@ -92,14 +88,24 @@ void loop() {
     //    msg.toCharArray(char_array, str_len);
     //    str_msg.data = char_array;
     //    Serial.println(msg);
-    
-    state_msg.data[0] = X;
-    state_msg.data[1] = Y;
-    state_msg.data[2] = Theta;
-    state_msg.data[3] = VX;
-    state_msg.data[4] = W;
-    state_msg.data[5] = W;
-    StateMsg.publish( &state_msg );
+
+    // feed odom message
+    odom.header.stamp = nh.now();
+    odom.header.frame_id = "odom";
+    odom.child_frame_id = "base_link";
+    odom.pose.pose.position.x = X;
+    odom.pose.pose.position.y = Y;
+    odom.pose.pose.position.z = 0.0;
+    odom.pose.pose.orientation.w = QW;
+    odom.pose.pose.orientation.x = QX;
+    odom.pose.pose.orientation.y = QY;
+    odom.pose.pose.orientation.z = QZ;
+    // Velocity expressed in base_link frame
+    odom.twist.twist.linear.x = VX;
+    odom.twist.twist.linear.y = 0.0f;
+    odom.twist.twist.angular.z = W;
+
+    odom_publisher.publish(&odom);
 
     oldMillis = millis();
     nh.spinOnce();

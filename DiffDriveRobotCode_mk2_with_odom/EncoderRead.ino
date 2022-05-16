@@ -7,8 +7,12 @@ extern float X;
 extern float Y;
 extern float Theta;
 
+extern float QX;
+extern float QY;
+extern float QZ;
+extern float QW;
+
 extern float VX;
-extern float VY;
 extern float W;
 extern double DT;
 
@@ -86,8 +90,12 @@ void Timer_Isr() {
     Theta -= 2 * PI;
   }
   VX = dX / deltaT;
-  VY = dY / deltaT;
   W = dtheta / deltaT;
+
+  QW = cos(abs(Theta) / 2.0f);
+  QX = 0.0f;
+  QY = 0.0f;
+  QZ = sign(Theta) * sin(abs(Theta) / 2.0f);
 
   DT = deltaT;
   //  Serial.println(VRight);
