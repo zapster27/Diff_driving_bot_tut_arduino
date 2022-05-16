@@ -28,6 +28,8 @@ float VX = 0;
 float W = 0;
 double DT = 0;
 
+int rightMDir = 1;
+int leftMDir = 1;
 
 double RSTtime = 0;
 const int default_vel = 100;
@@ -46,11 +48,11 @@ void cmd_vel_cb(const geometry_msgs::Twist & msg) {
   SetSpeedLeft(left_cmd);
   SetSpeedRight(right_cmd);
 
+  
+  rightMDir = right_cmd/abs(right_cmd);
+  leftMDir = left_cmd/abs(left_cmd);;
+
 }
-
-char label[] =  "test";
-int array_size = 6;
-
 
 ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel", cmd_vel_cb);
 
@@ -81,13 +83,6 @@ void loop() {
   // put your main code here, to run repeatedly:
   if (millis() - oldMillis >= 100) {
     //    readData();
-
-
-    //    int str_len = msg.length() + 1;
-    //    char char_array[str_len];
-    //    msg.toCharArray(char_array, str_len);
-    //    str_msg.data = char_array;
-    //    Serial.println(msg);
 
     // feed odom message
     odom.header.stamp = nh.now();
