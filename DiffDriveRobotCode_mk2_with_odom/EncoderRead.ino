@@ -16,6 +16,9 @@ extern float VX;
 extern float W;
 extern double DT;
 
+extern int rightMDir;
+extern int leftMDir;
+
 extern double RSTtime;
 
 unsigned int counterLeft = 0;   // Holds the count of pulses detected
@@ -60,8 +63,8 @@ void Timer_Isr() {
   deltaT = millis() - RSTtime;
 
 
-  float DLeft = 2 * PI * (wheelDiameter * 0.5) * counterLeft / (20 * 1000);
-  float DRight = 2 * PI * (wheelDiameter * 0.5) * counterRight / (20 * 1000);
+  float DLeft = leftMDir * 2 * PI * (wheelDiameter * 0.5) * counterLeft / (20 * 1000);
+  float DRight = rightMDir * 2 * PI * (wheelDiameter * 0.5) * counterRight / (20 * 1000);
   float DCenter = (DRight + DLeft) / 2;
 
   VLeft = DLeft / deltaT;
@@ -86,9 +89,11 @@ void Timer_Isr() {
   X += dX;
   Y += dY;
   Theta = (Theta + dtheta) ;
+  
   while (Theta >= 2 * PI) {
     Theta -= 2 * PI;
   }
+  
   VX = dX / deltaT;
   W = dtheta / deltaT;
 
