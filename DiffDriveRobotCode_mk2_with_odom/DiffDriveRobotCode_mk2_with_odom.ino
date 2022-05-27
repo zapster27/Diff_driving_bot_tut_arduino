@@ -28,15 +28,12 @@ float VX = 0;
 float W = 0;
 double DT = 0;
 
-int rightMDir = 1;
-int leftMDir = 1;
-
 double RSTtime = 0;
 const int default_vel = 100;
 float aX = 0, aY = 0, aZ = 0, gX = 0, gY = 0, gZ = 0;
 
 int oldMillis = 0;
-
+int imuSeqCounter = 1;
 void cmd_vel_cb(const geometry_msgs::Twist & msg) {
   // Read the message. Act accordingly.
   // We only care about the linear x, and the rotational z.
@@ -47,11 +44,6 @@ void cmd_vel_cb(const geometry_msgs::Twist & msg) {
 
   SetSpeedLeft(left_cmd);
   SetSpeedRight(right_cmd);
-
-  
-  rightMDir = right_cmd/abs(right_cmd);
-  leftMDir = left_cmd/abs(left_cmd);;
-
 }
 
 ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel", cmd_vel_cb);
