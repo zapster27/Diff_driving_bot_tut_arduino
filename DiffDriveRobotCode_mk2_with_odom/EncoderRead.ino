@@ -57,9 +57,9 @@ void EncoderInit() {
 // encoder event for the interrupt callS
 void leftEncoderEvent() {
   if (digitalRead(LH_ENCODER_B) > 0) {
-    leftCount++;
-  } else {
     leftCount--;
+  } else {
+    leftCount++;
   }
 }
 
