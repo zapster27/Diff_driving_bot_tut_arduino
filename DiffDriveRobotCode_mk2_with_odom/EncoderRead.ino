@@ -26,10 +26,10 @@ volatile long rightCount = 0;
 
 double timeInterval = 100000;
 
-int wheelDiameter = 80;
-int wheelTrack = 341;
+int wheelDiameter = 65;
+int wheelTrack = 33;
 int CPR = 494;
-//float rotaryDistance = 2 * 3.14 * wheelDiameter / 2;
+float rotaryDistance = 2 * 3.14 * wheelDiameter / 2;
 
 float RPSLeft = 0;
 float RPSRight = 0;
@@ -65,9 +65,9 @@ void leftEncoderEvent() {
 
 void rightEncoderEvent() {
   if (digitalRead(RH_ENCODER_B) > 0) {
-    rightCount--;
-  } else {
-    rightCount++;
+      rightCount++;
+    } else {
+      rightCount--;
   }
 }
 
