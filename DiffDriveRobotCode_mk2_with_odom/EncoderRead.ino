@@ -61,11 +61,6 @@ void leftEncoderEvent() {
   } else {
     leftCount--;
   }
-  if (digitalRead(LH_ENCODER_B) > 0) {
-    leftCount--;
-  } else {
-    leftCount++;
-  }
 }
 
 void rightEncoderEvent() {
@@ -73,11 +68,6 @@ void rightEncoderEvent() {
     rightCount--;
   } else {
     rightCount++;
-  }
-  if (digitalRead(RH_ENCODER_B) > 0) {
-    rightCount++;
-  } else {
-    rightCount--;
   }
 }
 
