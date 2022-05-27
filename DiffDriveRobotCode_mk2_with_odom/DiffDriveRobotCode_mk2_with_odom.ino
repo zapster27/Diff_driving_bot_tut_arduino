@@ -43,16 +43,17 @@ void cmd_vel_cb(const geometry_msgs::Twist & msg) {
   float z_rotation = msg.angular.z;
   x = x / 0.22;
   z_rotation = z_rotation / 2.84;
-  float speed_wish_right = (z_rotation*wheelTrack)/2 + x;
-  float speed_wish_left = x*2-speed_wish_right;
+  float speed_wish_right = ( z_rotation * wheelTrack ) / 2 + x;
+  float speed_wish_left = x * 2 - speed_wish_right;
 
   
 //  int right_cmd = x * default_vel * min(1, max(z_rotation * 1.5 + 1, -1));
 //  int left_cmd =  x * default_vel * min(1, max(-z_rotation * 1.5 + 1 , -1));
   Serial2.print("left_cmd");Serial2.println(speed_wish_right);
   Serial2.print("right_cmd");Serial2.println(speed_wish_left);
-  SetSpeedLeft(speed_wish_right);
-  SetSpeedRight(speed_wish_left);
+  SetSpeedLeft(speed_wish_left);
+  delay(2);
+  SetSpeedRight(speed_wish_right);
 }
 
 ros::Subscriber<geometry_msgs::Twist> cmd_vel("cmd_vel", cmd_vel_cb);
@@ -73,11 +74,16 @@ void setup() {
 
   EncoderInit();
   Serial2.println("Encoder initialized");
+  
+  DriverInit();
+
+  
   nh.initNode();
   nh.advertise(odom_publisher);
   nh.subscribe(cmd_vel);
   Serial2.println("Advertising Topics");
 
+  
   delay(500);
   RSTtime = millis();
 }
