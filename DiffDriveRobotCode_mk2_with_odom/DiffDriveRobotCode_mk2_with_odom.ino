@@ -35,13 +35,14 @@ float aX = 0, aY = 0, aZ = 0, gX = 0, gY = 0, gZ = 0;
 
 int oldMillis = 0;
 int imuSeqCounter = 1;
+
 void cmd_vel_cb(const geometry_msgs::Twist & msg) {
   // Read the message. Act accordingly.
   // We only care about the linear x, and the rotational z.
-  const float x = msg.linear.x;
-  const float z_rotation = msg.angular.z;.
+  float x = msg.linear.x;
+  float z_rotation = msg.angular.z;
   x = x / 0.22;
-  z_rotation = z / 2.84/;
+  z_rotation = z_rotation / 2.84;
   float speed_wish_right = (z_rotation*wheelTrack)/2 + x;
   float speed_wish_left = x*2-speed_wish_right;
 

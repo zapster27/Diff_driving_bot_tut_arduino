@@ -41,7 +41,7 @@ void SetSpeedRight(float speedRight) {
   rightMotorPID.setTarget(speedRight);
   rightMotorPID.setInput(VRight);
   speedRightSet = min(1, max(0, abs(speedRightSet + rightMotorPID.getOutput())));
-  speedRightSet = map(speedRightSet, 0, 1, 0, 400 * (speedRight/abs(speedRight));
+  speedRightSet = map(speedRightSet, 0, 1, 0, 400) * (speedRight/abs(speedRight));
   Serial2.print("speedRightSet");Serial2.println(speedRightSet);
   md.setM1Speed(speedRightSet);
 }
