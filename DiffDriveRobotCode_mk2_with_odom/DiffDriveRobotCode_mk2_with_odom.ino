@@ -41,12 +41,13 @@ void cmd_vel_cb(const geometry_msgs::Twist & msg) {
   const float z_rotation = msg.angular.z;
   int right_cmd = x * default_vel * min(1, max(z_rotation * 1.5 + 1, -1));
   int left_cmd =  x * default_vel * min(1, max(-z_rotation * 1.5 + 1 , -1));
-
+  Serial2.print("left_cmd");Serial2.println(left_cmd);
+  Serial2.print("right_cmd");Serial2.println(right_cmd);
   SetSpeedLeft(left_cmd);
   SetSpeedRight(right_cmd);
 }
 
-ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel", cmd_vel_cb);
+ros::Subscriber<geometry_msgs::Twist> cmd_vel("cmd_vel", cmd_vel_cb);
 
 template <typename type>
 type sign(type value) {
@@ -55,17 +56,19 @@ type sign(type value) {
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("Starting init...");
+  Serial2.begin(115200);
+  Serial2.println("Starting init...");
 
   //  IMUInit();
-  Serial.println("IMU initialized");
+  Serial2.println("IMU initialized");
   oldMillis = millis();
 
   EncoderInit();
-  Serial.println("Encoder initialized");
+  Serial2.println("Encoder initialized");
   nh.initNode();
   nh.advertise(odom_publisher);
-  Serial.println("Advertising Topics");
+  nh.subscribe(cmd_vel);
+  Serial2.println("Advertising Topics");
 
   delay(500);
   RSTtime = millis();

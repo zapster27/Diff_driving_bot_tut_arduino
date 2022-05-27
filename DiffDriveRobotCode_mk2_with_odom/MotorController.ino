@@ -30,7 +30,8 @@ unsigned char speedLeftSet = 0;
 void SetSpeedLeft(float speedLeft) {
   leftMotorPID.setTarget(speedLeft);
   leftMotorPID.setInput(VLeft);
-  speedLeftSet = min(255, max(0, speedLeftSet + leftMotorPID.getOutput()));
+  speedLeftSet = min(400, max(0, speedLeftSet + leftMotorPID.getOutput()));
+  Serial2.print("speedLeftSet");Serial2.println(speedLeftSet);
   md.setM1Speed(speedLeftSet);
 }
 unsigned char speedRightSet = 0;
@@ -38,6 +39,7 @@ unsigned char speedRightSet = 0;
 void SetSpeedRight(float speedRight) {
   rightMotorPID.setTarget(speedRight);
   rightMotorPID.setInput(VRight);
-  speedRightSet = min(255, max(0, speedRightSet + rightMotorPID.getOutput()));
+  speedRightSet = min(400, max(0, speedRightSet + rightMotorPID.getOutput()));
+  Serial2.print("speedRightSet");Serial2.println(speedRightSet);
   md.setM1Speed(speedRightSet);
 }
