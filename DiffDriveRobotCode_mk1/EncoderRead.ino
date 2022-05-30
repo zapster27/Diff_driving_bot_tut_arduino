@@ -8,8 +8,8 @@ extern double VRight;
 
 extern double RSTtime;
 
-extern double tickLeft = 0;
-extern double tickRight = 0;
+extern double tickLeft;
+extern double tickRight;
 
 volatile int leftCount = 0;
 volatile int rightCount = 0;
@@ -68,13 +68,13 @@ void Timer_Isr() {
   VLeft = DLeft * 1000 / deltaT;
   VRight = DRight * 1000 / deltaT;
 
-  String msg = String(leftCount)+","+String(rightCount)+","+String(deltaT)"\n";
+  String msg = String(leftCount) + "," + String(rightCount) + "," + String(deltaT) + "\n";
   int str_len = msg.length() + 1;
   char char_array[str_len];
   msg.toCharArray(char_array, str_len);
   tick_msg.data = char_array;
   Serial.println(msg);
-  tick_msg.publish( &tick_msg );
+  tickMsg.publish( &tick_msg );
 
   rightCount = 0;
   leftCount = 0;

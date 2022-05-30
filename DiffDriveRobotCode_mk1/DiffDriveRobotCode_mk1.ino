@@ -7,17 +7,22 @@
 
 #include <ros.h>
 #include <std_msgs/String.h>
+#include <geometry_msgs/Twist.h>
 
 ros::NodeHandle  nh;
 
 std_msgs::String tick_msg;
 ros::Publisher tickMsg("tick_msg", &tick_msg);
 
+double VLeft = 0;
+double VRight = 0;
+
 double DT = 0;
 double tickLeft = 0;
 double tickRight = 0;
 double RSTtime = 0;
 
+int wheelTrack = 341;
 float aX = 0, aY = 0, aZ = 0, gX = 0, gY = 0, gZ = 0;
 
 int oldMillis = 0;
@@ -37,7 +42,7 @@ void cmd_vel_cb(const geometry_msgs::Twist & msg) {
   //    Serial2.print("speed_wish_right");Serial2.println(speed_wish_right);
 }
 
-ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel", cmd_vel_cb);
+ros::Subscriber<geometry_msgs::Twist> cmd_vel("cmd_vel", cmd_vel_cb);
 
 void setup() {
   Serial.begin(115200);
