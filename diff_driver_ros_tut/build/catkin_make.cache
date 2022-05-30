@@ -1,0 +1,2 @@
+odom_publisher
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/install -G Unix Makefiles
