@@ -7,75 +7,56 @@
 
 #include <ros.h>
 #include <std_msgs/String.h>
-#include <std_msgs/Empty.h>
-#include <geometry_msgs/Twist.h>
-#include <std_msgs/Float32MultiArray.h>
 
 ros::NodeHandle  nh;
-std_msgs::Float32MultiArray  state_msg;
-std_msgs::MultiArrayDimension myDim;
 
-ros::Publisher StateMsg("StateMsg", &state_msg);
+std_msgs::String tick_msg;
+ros::Publisher tickMsg("tick_msg", &tick_msg);
 
-
-float X = 0;
-float Y = 0;
-float Theta = 0;
-
-float VX = 0;
-float VY = 0;
-float W = 0;
 double DT = 0;
-
-
+double tickLeft = 0;
+double tickRight = 0;
 double RSTtime = 0;
-const int default_vel = 100;
+
 float aX = 0, aY = 0, aZ = 0, gX = 0, gY = 0, gZ = 0;
 
 int oldMillis = 0;
 
 void cmd_vel_cb(const geometry_msgs::Twist & msg) {
-  // Read the message. Act accordingly.
-  // We only care about the linear x, and the rotational z.
-  const float x = msg.linear.x;
-  const float z_rotation = msg.angular.z;
-  int right_cmd = x * default_vel * min(1, max(z_rotation * 1.5 + 1, -1));
-  int left_cmd =  x * default_vel * min(1, max(-z_rotation * 1.5 + 1 , -1));
+  float x = msg.linear.x;
+  float z_rotation = msg.angular.z;
+  x = x * 11 / 0.22;
+  z_rotation = z_rotation / 2.84;
+  float speed_wish_right = ( z_rotation * wheelTrack ) / 2 + x;
+  float speed_wish_left = x * 2 - speed_wish_right;
 
-  SetSpeedLeft(left_cmd);
-  SetSpeedRight(right_cmd);
+  SetSpeedLeft(speed_wish_left);
+  SetSpeedRight(speed_wish_right);
 
-}
-
-char label[] =  "test";
-int array_size = 6;
-void initRosPub() {
-  myDim.label = label;
-  myDim.size = array_size;
-  myDim.stride = 1 * array_size;
-  state_msg.layout.data_offset = 0;
-  state_msg.layout.dim[0] = myDim;
-  state_msg.data_length = array_size;
-  state_msg.data = (float *)malloc(sizeof(float) * array_size);
+  //    Serial2.print("x");Serial2.println(x);
+  //    Serial2.print("speed_wish_right");Serial2.println(speed_wish_right);
 }
 
 ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel", cmd_vel_cb);
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("Starting init...");
+  Serial2.begin(115200);
+  Serial2.println("Starting init...");
 
-//  IMUInit();
-  Serial.println("IMU initialized");
+  //  IMUInit();
+  Serial2.println("IMU initialized");
   oldMillis = millis();
 
   EncoderInit();
-  Serial.println("Encoder initialized");
-  initRosPub();
+  Serial2.println("Encoder initialized");
+
+  DriverInit();
+
   nh.initNode();
-  nh.advertise(ArduinoData);
-  nh.advertise(StateMsg);
-  Serial.println("Advertising Topics");
+  nh.advertise(tickMsg);
+  nh.subscribe(cmd_vel);
+  Serial2.println("Advertising Topics");
 
   delay(500);
   RSTtime = millis();
@@ -84,23 +65,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   if (millis() - oldMillis >= 100) {
-//    readData();
-
-
-    //    int str_len = msg.length() + 1;
-    //    char char_array[str_len];
-    //    msg.toCharArray(char_array, str_len);
-    //    str_msg.data = char_array;
-    //    Serial.println(msg);
-    
-    state_msg.data[0] = X;
-    state_msg.data[1] = Y;
-    state_msg.data[2] = Theta;
-    state_msg.data[3] = VX;
-    state_msg.data[4] = W;
-    state_msg.data[5] = W;
-    StateMsg.publish( &state_msg );
-
+    //    readData();
     oldMillis = millis();
     nh.spinOnce();
   }

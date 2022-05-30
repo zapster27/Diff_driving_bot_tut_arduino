@@ -1,99 +1,94 @@
-//20 holes per rotation
+#define RH_ENCODER_A 3
+#define RH_ENCODER_B 24
+#define LH_ENCODER_A 19
+#define LH_ENCODER_B 22
 
-float VLeft;
-float VRight;
-
-extern float X;
-extern float Y;
-extern float Theta;
-
-extern float VX;
-extern float VY;
-extern float W;
-extern double DT;
+extern double VLeft;
+extern double VRight;
 
 extern double RSTtime;
 
-unsigned int counterLeft = 0;   // Holds the count of pulses detected
-unsigned int counterRight = 0;   // Holds the count of pulses detected
+extern double tickLeft = 0;
+extern double tickRight = 0;
 
-int leftEncoderPin = 19;
-int rightEncoderPin = 18;
+volatile int leftCount = 0;
+volatile int rightCount = 0;
 
 double timeInterval = 100000;
 
-int wheelDiameter = 65;
-int wheelTrack = 33;
-float rotaryDistance = 2 * 3.14 * wheelDiameter / 2;
-
-float RPSLeft = 0;
-float RPSRight = 0;
+int wheelDiameter = 80;
+extern int wheelTrack;
+int CPR = 494;
+//float rotaryDistance = 2 * 3.14 * wheelDiameter / 2;
 double deltaT = 0;
 
-double dX = 0;
-double dY = 0;
-double dtheta = 0;
-
 void EncoderInit() {
-  pinMode(leftEncoderPin, INPUT);
-  attachInterrupt(digitalPinToInterrupt(leftEncoderPin), DocountLeft, FALLING );  // Create interrupt handler to count pulses
 
-  pinMode(rightEncoderPin, INPUT);
-  attachInterrupt(digitalPinToInterrupt(rightEncoderPin), DocountRight, FALLING );  // Create interrupt handler to count pulses
+  pinMode(LH_ENCODER_A, INPUT);
+  pinMode(LH_ENCODER_B, INPUT);
+  pinMode(RH_ENCODER_A, INPUT);
+  pinMode(RH_ENCODER_B, INPUT);
+
+
+  attachInterrupt(digitalPinToInterrupt(RH_ENCODER_A), rightEncoderEvent, RISING);
+  attachInterrupt(digitalPinToInterrupt(LH_ENCODER_A), leftEncoderEvent, RISING);
 
   Timer1.initialize(timeInterval);
   Timer1.attachInterrupt( Timer_Isr );
 }
-void DocountLeft() {
-  counterLeft++;  // increase +1 the counter value
+
+// encoder event for the interrupt callS
+void leftEncoderEvent() {
+  if (digitalRead(LH_ENCODER_B) > 0) {
+    leftCount--;
+  } else {
+    leftCount++;
+  }
+  //  Serial2.print("leftCount   "); Serial2.print(leftCount);
+  //  Serial2.print("    rightCount   "); Serial2.println(rightCount);
 }
-void DocountRight() {
-  counterRight++;  // increase +1 the counter value
+
+void rightEncoderEvent() {
+  if (digitalRead(RH_ENCODER_B) > 0) {
+    rightCount++;
+  } else {
+    rightCount--;
+  }
+  //  Serial2.print("leftCount   "); Serial2.print(leftCount);
+  //  Serial2.print("    rightCount   "); Serial2.println(rightCount);
 }
 
 void Timer_Isr() {
   Timer1.detachInterrupt();           // Disable the timer
   deltaT = millis() - RSTtime;
 
+  float DLeft = 2 * PI * (wheelDiameter * 0.5) * leftCount / (CPR * 1000);
+  float DRight = 2 * PI * (wheelDiameter * 0.5) * rightCount / (CPR * 1000);
 
-  float DLeft = 2 * PI * (wheelDiameter * 0.5) * counterLeft / (20 * 1000);
-  float DRight = 2 * PI * (wheelDiameter * 0.5) * counterRight / (20 * 1000);
-  float DCenter = (DRight + DLeft) / 2;
+  VLeft = DLeft * 1000 / deltaT;
+  VRight = DRight * 1000 / deltaT;
 
-  VLeft = DLeft / deltaT;
-  VRight = DRight / deltaT;
+  String msg = String(leftCount)+","+String(rightCount)+","+String(deltaT)"\n";
+  int str_len = msg.length() + 1;
+  char char_array[str_len];
+  msg.toCharArray(char_array, str_len);
+  tick_msg.data = char_array;
+  Serial.println(msg);
+  tick_msg.publish( &tick_msg );
 
-  dtheta = (DRight - DLeft) / wheelTrack;
+  rightCount = 0;
+  leftCount = 0;
+  RSTtime = millis();
 
-  if (DLeft == DRight) {
-    dX = DRight * cos(Theta);
-    dY = DRight * sin(Theta);
-  }
-  else {
-    double radius = DCenter / dtheta;
+  //  Serial2.print("leftCount   "); Serial2.print(leftCount);
+  //  Serial2.print("    rightCount   "); Serial2.println(rightCount);
 
-    double iccX = X - radius * sin(Theta);
-    double iccY = Y + radius * cos(Theta);
+  //  Serial2.print("DLeft   "); Serial2.print(DLeft);
+  //  Serial2.print("    DRight   "); Serial2.println(DRight);
 
-    dX = radius * sin(dtheta + Theta) + iccX - X;
-    dY = iccY - radius * cos(dtheta + Theta) - Y;
-  }
+  //  Serial2.print("VLeft   "); Serial2.print(VLeft);
+  //  Serial2.print("    VRight   "); Serial2.println(VRight);
+  //  Serial2.println();
 
-  X += dX;
-  Y += dY;
-  Theta = (Theta + dtheta) ;
-  while (Theta >= 2 * PI) {
-    Theta -= 2 * PI;
-  }
-  VX = dX / deltaT;
-  VY = dY / deltaT;
-  W = dtheta / deltaT;
-
-  DT = deltaT;
-  //  Serial.println(VRight);
-  counterRight = 0;
-  counterLeft = 0;
-  dtheta = 0;
-  deltaT = millis();
   Timer1.attachInterrupt( Timer_Isr ); // Re-enable the timer
 }
