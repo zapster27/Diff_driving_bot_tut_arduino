@@ -1,10 +1,10 @@
-#define RH_ENCODER_A 2
-#define RH_ENCODER_B 3
-#define LH_ENCODER_A 18
-#define LH_ENCODER_B 19
+#define RH_ENCODER_A 3
+#define RH_ENCODER_B 24
+#define LH_ENCODER_A 19
+#define LH_ENCODER_B 22
 
-float VLeft;
-float VRight;
+extern double VLeft;
+extern double VRight;
 
 extern float X;
 extern float Y;
@@ -24,7 +24,7 @@ extern double RSTtime;
 volatile long leftCount = 0;
 volatile long rightCount = 0;
 
-double timeInterval = 100000;
+double timeInterval =200000;
 
 int wheelDiameter = 80;
 extern int wheelTrack;
@@ -47,8 +47,8 @@ void EncoderInit() {
   pinMode(RH_ENCODER_B, INPUT);
 
 
-  attachInterrupt(digitalPinToInterrupt(LH_ENCODER_A), leftEncoderEvent, RISING);
   attachInterrupt(digitalPinToInterrupt(RH_ENCODER_A), rightEncoderEvent, RISING);
+  attachInterrupt(digitalPinToInterrupt(LH_ENCODER_A), leftEncoderEvent, RISING);
 
   Timer1.initialize(timeInterval);
   Timer1.attachInterrupt( Timer_Isr );
@@ -61,6 +61,8 @@ void leftEncoderEvent() {
   } else {
     leftCount++;
   }
+//  Serial2.print("leftCount   "); Serial2.print(leftCount);
+//  Serial2.print("    rightCount   "); Serial2.println(rightCount);
 }
 
 void rightEncoderEvent() {
@@ -69,20 +71,30 @@ void rightEncoderEvent() {
     } else {
       rightCount--;
   }
+//  Serial2.print("leftCount   "); Serial2.print(leftCount);
+//  Serial2.print("    rightCount   "); Serial2.println(rightCount);
 }
 
 void Timer_Isr() {
   Timer1.detachInterrupt();           // Disable the timer
   deltaT = millis() - RSTtime;
 
-
+  RSTtime = millis();
   float DLeft = 2 * PI * (wheelDiameter * 0.5) * leftCount / (CPR * 1000);
   float DRight = 2 * PI * (wheelDiameter * 0.5) * rightCount / (CPR * 1000);
   float DCenter = (DRight + DLeft) / 2;
+//  Serial2.print("leftCount   "); Serial2.print(leftCount);
+//  Serial2.print("    rightCount   "); Serial2.println(rightCount);
 
-  VLeft = DLeft / deltaT;
-  VRight = DRight / deltaT;
+//  Serial2.print("DLeft   "); Serial2.print(DLeft);
+//  Serial2.print("    DRight   "); Serial2.println(DRight);
+  VLeft = DLeft *1000/ deltaT;
+  VRight = DRight *1000/ deltaT;
 
+//  Serial2.print("VLeft   "); Serial2.print(VLeft);
+//  Serial2.print("    VRight   "); Serial2.println(VRight);
+//  Serial2.println();
+  
   dtheta = (DRight - DLeft) / wheelTrack;
 
   if (DLeft == DRight) {
@@ -107,19 +119,18 @@ void Timer_Isr() {
     Theta -= 2 * PI;
   }
 
-  VX = dX / deltaT;
-  W = dtheta / deltaT;
+  VX = dX * 1000 / deltaT;
+  W = dtheta * 1000  / deltaT;
 
   QW = cos(abs(Theta) / 2.0f);
   QX = 0.0f;
   QY = 0.0f;
   QZ = sign(Theta) * sin(abs(Theta) / 2.0f);
 
-  DT = deltaT;
+  DT = deltaT * 1000 ;
   //  Serial.println(VRight);
   rightCount = 0;
   leftCount = 0;
   dtheta = 0;
-  deltaT = millis();
   Timer1.attachInterrupt( Timer_Isr ); // Re-enable the timer
 }

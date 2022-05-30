@@ -1,10 +1,16 @@
-#define kP 1
-#define kD 1
-#define kI 1
+#define kPL 0.11
+#define kDL 0
+#define kIL 0.0001
+
+#define kPR 0.11
+#define kDR 0
+#define kIR 0.00011
+
+
 DualVNH5019MotorShield md;
 
-extern float VLeft;
-extern float VRight;
+extern double VLeft;
+extern double VRight;
 
 arc::PID<double> leftMotorPID(1.0, 0, 0);
 arc::PID<double> rightMotorPID(1.0, 0, 0);
@@ -24,71 +30,85 @@ double speedRightSet = 0;
 void DriverInit() {
   md.init();
   Serial2.println("Motor Initialized");
-  prevTimeLeft = millis()+500;
-  prevTimeRight = millis()+500;
+  prevTimeLeft = millis() + 500;
+  prevTimeRight = millis() + 500;
 }
 
 
 
 void SetSpeedLeft(float speedLeft) {
   currTimeLeft = millis();
-  
-  errorLeft = speedLeft - VLeft;
-  Serial2.print("VLeft   "); Serial2.print(VLeft);
-  cumErrorLeft += errorLeft * ((double)(currTimeLeft-prevTimeLeft));
-  rateErrorLeft = (errorLeft - prevErrorLeft)/((double)(currTimeLeft-prevTimeLeft));
-  
-  outLeft = kP * errorLeft + kD * rateErrorLeft + kI * cumErrorLeft;
-  
-  prevErrorLeft = errorLeft;
-  prevTimeLeft = currTimeLeft;
+  if (speedLeft == 0) {
+    md.setM2Speed(0);
+    speedLeftSet = 0;
+    errorLeft = 0;
+    cumErrorLeft = 0;
+    rateErrorLeft = 0;
+    outLeft = 0;
+    
+  } else {
+//    Serial2.print("speedLeft,"); Serial2.print(speedLeft);
 
-  speedLeftSet = (int)(min(400, abs(speedLeftSet + outLeft)));
-  if(speedLeft < 0){
-    speedLeftSet = (int)(min(400, abs(speedLeftSet + outLeft))) * -1;
+    errorLeft = speedLeft - VLeft;
+//    Serial2.print(", VLeft,"); Serial2.print(VLeft);
+    cumErrorLeft += errorLeft * ((double)(currTimeLeft - prevTimeLeft)/1000);
+    rateErrorLeft = (errorLeft - prevErrorLeft) / ((double)(currTimeLeft - prevTimeLeft)/1000);
+
+    outLeft = kPL * errorLeft + kDL * rateErrorLeft + kIL * cumErrorLeft;
+
+    prevErrorLeft = errorLeft;
+    prevTimeLeft = currTimeLeft;
+
+    if (outLeft < 0) {
+      speedLeftSet = (max(-400, speedLeftSet + outLeft ));
+    }
+    else {
+      speedLeftSet = (min(400, speedLeftSet + outLeft));
+    }
+
+//    Serial2.print("    outLeft    "); Serial2.print(outLeft);
+//    Serial2.print("    speedLeftSet    "); Serial2.print(speedLeftSet);
+//    Serial2.println();
+    md.setM2Speed(speedLeftSet);
   }
-  
-  
-//  leftMotorPID.setTarget(speedLeft);
-//  leftMotorPID.setInput(VLeft);
-//  float PIDValLeft = leftMotorPID.getOutput();
-//  speedLeftSet = min(400, max(0, abs(speedLeftSet + PIDValLeft)));
-  Serial2.print("outLeft   "); Serial2.print(outLeft);
-//  speedLeftSet = map(speedLeftSet, 0, 1, 0, 400) * (speedLeft / abs(speedLeft));
-  Serial2.print("   speedLeftSet   "); Serial2.println(speedLeftSet);
-  Serial2.println();
-  md.setM2Speed(speedLeftSet);
   stopIfFault();
 }
 
 
 void SetSpeedRight(float speedRight) {
   currTimeRight = millis();
-  
-  errorRight = speedRight - VRight;
-  cumErrorRight += errorRight * ((double)(currTimeRight-prevTimeRight));
-  rateErrorRight = (errorRight - prevErrorRight)/((double)(currTimeRight-prevTimeRight));
-  
-  outRight = kP * errorRight + kD * rateErrorRight + kI * cumErrorRight;
-  
-  prevErrorRight = errorRight;
-  prevTimeRight = currTimeRight;
-  speedRightSet = (int)(min(400, abs(speedRightSet + outRight)));
-  if(speedRight < 0){
-    speedRightSet = (int)(min(400, abs(speedRightSet + outRight))) * -1;
-  }
-  
+  if (speedRight == 0) {
+    md.setM1Speed(0);
+    speedRightSet = 0;
+    errorRight = 0;
+    cumErrorRight = 0;
+    rateErrorRight = 0;
+    outRight = 0;
+    
+  } else {
+    errorRight = speedRight - VRight;
+//    Serial2.print("speedRight    "); Serial2.print(speedRight);
+    /*Serial2.print("    VRight    ")*/; Serial2.println(VRight);
+    cumErrorRight += errorRight * ((double)(currTimeRight - prevTimeRight)/1000);
+    rateErrorRight = (errorRight - prevErrorRight) / ((double)(currTimeRight - prevTimeRight)/1000);
 
-//  
-//  rightMotorPID.setTarget(speedRight);
-//  rightMotorPID.setInput(VRight);
-//  float PIDValRight = rightMotorPID.getOutput();
-//  speedRightSet = min(1, max(0, abs(speedRightSet + PIDValRight)));
-  Serial2.print("outRight   "); Serial2.print(outRight);
-//  speedRightSet = map(speedRightSet, 0, 1, 0, 400) * (speedRight / abs(speedRight));
-  Serial2.print("   speedRightSet   "); Serial2.println(speedRightSet);
-  Serial2.println();
-  md.setM1Speed(speedRightSet);
+    outRight = kPR * errorRight + kDR * rateErrorRight + kIR * cumErrorRight;
+
+    prevErrorRight = errorRight;
+    prevTimeRight = currTimeRight;
+    
+    if (outLeft < 0) {
+      speedRightSet = (max(-400, speedRightSet + outRight ));
+    }
+    else {
+      speedRightSet = (min(400, speedRightSet + outRight));
+    }
+    
+//    Serial2.print("    outRight    "); Serial2.print(outRight);
+//    Serial2.print("    speedRightSet    "); Serial2.print(speedRightSet);
+//    Serial2.println();
+    md.setM1Speed(speedRightSet);
+  }
   stopIfFault();
 }
 
