@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src
+CMAKE_SOURCE_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build
+CMAKE_BINARY_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build
 
 # Utility rule file for rosgraph_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build: rosgrap
 .PHONY : odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 
 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/odom_publisher && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/odom_publisher && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 
 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/odom_publisher /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/odom_publisher /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/odom_publisher /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/odom_publisher /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
 

@@ -3,7 +3,7 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel}
+: ${_CATKIN_SETUP_DIR:=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel}
 CATKIN_SETUP_UTIL_ARGS="--extend --local"
 . "$_CATKIN_SETUP_DIR/setup.sh"
 unset CATKIN_SETUP_UTIL_ARGS

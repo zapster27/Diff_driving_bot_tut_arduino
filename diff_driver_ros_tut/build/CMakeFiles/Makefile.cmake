@@ -15,9 +15,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin_generated/order_packages.cmake"
   "odom_publisher/catkin_generated/ordered_paths.cmake"
   "odom_publisher/catkin_generated/package.cmake"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/CMakeLists.txt"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/odom_publisher/CMakeLists.txt"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/odom_publisher/package.xml"
+  "tick_publisher/catkin_generated/ordered_paths.cmake"
+  "tick_publisher/catkin_generated/package.cmake"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/CMakeLists.txt"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/odom_publisher/CMakeLists.txt"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/odom_publisher/package.xml"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/tick_publisher/CMakeLists.txt"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/tick_publisher/package.xml"
   "/opt/ros/noetic/share/catkin/cmake/all.cmake"
   "/opt/ros/noetic/share/catkin/cmake/assert.cmake"
   "/opt/ros/noetic/share/catkin/cmake/atomic_configure_file.cmake"
@@ -180,6 +184,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "odom_publisher/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tick_publisher/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -193,6 +198,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "odom_publisher/CMakeFiles/odom_publisher.dir/DependInfo.cmake"
   "odom_publisher/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake"
   "odom_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "odom_publisher/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake"
@@ -208,4 +214,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "odom_publisher/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake"
   "odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake"
+  "tick_publisher/CMakeFiles/tick_publisher.dir/DependInfo.cmake"
   )

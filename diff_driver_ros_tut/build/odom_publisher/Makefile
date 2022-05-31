@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src
+CMAKE_SOURCE_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build
+CMAKE_BINARY_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/CMakeFiles /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/odom_publisher/CMakeFiles/progress.marks
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/CMakeFiles 0
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/CMakeFiles /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/odom_publisher/CMakeFiles/progress.marks
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/clean
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,37 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/preinstall
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/preinstall
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
+odom_publisher/CMakeFiles/odom_publisher.dir/rule:
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/odom_publisher.dir/rule
+.PHONY : odom_publisher/CMakeFiles/odom_publisher.dir/rule
+
+# Convenience name for target.
+odom_publisher: odom_publisher/CMakeFiles/odom_publisher.dir/rule
+
+.PHONY : odom_publisher
+
+# fast build rule for target.
+odom_publisher/fast:
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/odom_publisher.dir/build.make odom_publisher/CMakeFiles/odom_publisher.dir/build
+.PHONY : odom_publisher/fast
+
+# Convenience name for target.
 odom_publisher/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : odom_publisher/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -179,12 +194,12 @@ std_msgs_generate_messages_py: odom_publisher/CMakeFiles/std_msgs_generate_messa
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/std_msgs_generate_messages_py.dir/build.make odom_publisher/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/std_msgs_generate_messages_py.dir/build.make odom_publisher/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : odom_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -194,12 +209,12 @@ std_msgs_generate_messages_nodejs: odom_publisher/CMakeFiles/std_msgs_generate_m
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make odom_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make odom_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : odom_publisher/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -209,12 +224,12 @@ roscpp_generate_messages_cpp: odom_publisher/CMakeFiles/roscpp_generate_messages
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make odom_publisher/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make odom_publisher/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : odom_publisher/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -224,12 +239,12 @@ roscpp_generate_messages_eus: odom_publisher/CMakeFiles/roscpp_generate_messages
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/roscpp_generate_messages_eus.dir/build.make odom_publisher/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/roscpp_generate_messages_eus.dir/build.make odom_publisher/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -239,12 +254,12 @@ rosgraph_msgs_generate_messages_nodejs: odom_publisher/CMakeFiles/rosgraph_msgs_
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : odom_publisher/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -254,12 +269,12 @@ std_msgs_generate_messages_lisp: odom_publisher/CMakeFiles/std_msgs_generate_mes
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make odom_publisher/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make odom_publisher/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/roscpp_generate_messages_py.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : odom_publisher/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -269,12 +284,12 @@ roscpp_generate_messages_py: odom_publisher/CMakeFiles/roscpp_generate_messages_
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/roscpp_generate_messages_py.dir/build.make odom_publisher/CMakeFiles/roscpp_generate_messages_py.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/roscpp_generate_messages_py.dir/build.make odom_publisher/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 .PHONY : odom_publisher/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -284,12 +299,12 @@ std_msgs_generate_messages_eus: odom_publisher/CMakeFiles/std_msgs_generate_mess
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make odom_publisher/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make odom_publisher/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : odom_publisher/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -299,12 +314,12 @@ roscpp_generate_messages_nodejs: odom_publisher/CMakeFiles/roscpp_generate_messa
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make odom_publisher/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make odom_publisher/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -314,12 +329,12 @@ rosgraph_msgs_generate_messages_cpp: odom_publisher/CMakeFiles/rosgraph_msgs_gen
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : odom_publisher/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -329,12 +344,12 @@ std_msgs_generate_messages_cpp: odom_publisher/CMakeFiles/std_msgs_generate_mess
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make odom_publisher/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make odom_publisher/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 .PHONY : odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -344,12 +359,12 @@ rosgraph_msgs_generate_messages_eus: odom_publisher/CMakeFiles/rosgraph_msgs_gen
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -359,12 +374,12 @@ rosgraph_msgs_generate_messages_lisp: odom_publisher/CMakeFiles/rosgraph_msgs_ge
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : odom_publisher/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -374,12 +389,12 @@ roscpp_generate_messages_lisp: odom_publisher/CMakeFiles/roscpp_generate_message
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make odom_publisher/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make odom_publisher/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -389,8 +404,35 @@ rosgraph_msgs_generate_messages_py: odom_publisher/CMakeFiles/rosgraph_msgs_gene
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
+
+src/odom_publisher.o: src/odom_publisher.cpp.o
+
+.PHONY : src/odom_publisher.o
+
+# target to build an object file
+src/odom_publisher.cpp.o:
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/odom_publisher.dir/build.make odom_publisher/CMakeFiles/odom_publisher.dir/src/odom_publisher.cpp.o
+.PHONY : src/odom_publisher.cpp.o
+
+src/odom_publisher.i: src/odom_publisher.cpp.i
+
+.PHONY : src/odom_publisher.i
+
+# target to preprocess a source file
+src/odom_publisher.cpp.i:
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/odom_publisher.dir/build.make odom_publisher/CMakeFiles/odom_publisher.dir/src/odom_publisher.cpp.i
+.PHONY : src/odom_publisher.cpp.i
+
+src/odom_publisher.s: src/odom_publisher.cpp.s
+
+.PHONY : src/odom_publisher.s
+
+# target to generate assembly for a file
+src/odom_publisher.cpp.s:
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f odom_publisher/CMakeFiles/odom_publisher.dir/build.make odom_publisher/CMakeFiles/odom_publisher.dir/src/odom_publisher.cpp.s
+.PHONY : src/odom_publisher.cpp.s
 
 # Help Target
 help:
@@ -402,6 +444,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... odom_publisher"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
@@ -420,6 +463,9 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... src/odom_publisher.o"
+	@echo "... src/odom_publisher.i"
+	@echo "... src/odom_publisher.s"
 .PHONY : help
 
 
@@ -431,6 +477,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src
+CMAKE_SOURCE_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build
+CMAKE_BINARY_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/CMakeFiles /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/CMakeFiles /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -283,6 +283,19 @@ gtest: cmake_check_build_system
 gtest/fast:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named odom_publisher
+
+# Build rule for target.
+odom_publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 odom_publisher
+.PHONY : odom_publisher
+
+# fast build rule for target.
+odom_publisher/fast:
+	$(MAKE) -f odom_publisher/CMakeFiles/odom_publisher.dir/build.make odom_publisher/CMakeFiles/odom_publisher.dir/build
+.PHONY : odom_publisher/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
@@ -479,6 +492,19 @@ rosgraph_msgs_generate_messages_py/fast:
 	$(MAKE) -f odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make odom_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
+#=============================================================================
+# Target rules for targets named tick_publisher
+
+# Build rule for target.
+tick_publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tick_publisher
+.PHONY : tick_publisher
+
+# fast build rule for target.
+tick_publisher/fast:
+	$(MAKE) -f tick_publisher/CMakeFiles/tick_publisher.dir/build.make tick_publisher/CMakeFiles/tick_publisher.dir/build
+.PHONY : tick_publisher/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -501,6 +527,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... odom_publisher"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
@@ -516,6 +543,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... tick_publisher"
 .PHONY : help
 
 
