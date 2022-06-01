@@ -10,6 +10,7 @@ project(odom_publisher)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  tf
 )
 
 ## System dependencies are found with CMake's conventions
