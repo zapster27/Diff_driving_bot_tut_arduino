@@ -1,2 +1,2 @@
-diffdrivebot:odom_publisher:tick_publisher
+diff_drive_bot_with_lidar:diffdrivebot:odom_publisher:tick_publisher
 -DCATKIN_DEVEL_PREFIX=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel -DCMAKE_INSTALL_PREFIX=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/install -G Unix Makefiles

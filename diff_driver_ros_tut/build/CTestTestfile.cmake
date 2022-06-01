@@ -7,4 +7,5 @@
 subdirs("gtest")
 subdirs("odom_publisher")
 subdirs("tick_publisher")
+subdirs("diff_drive_bot_with_lidar")
 subdirs("diffdrivebot")

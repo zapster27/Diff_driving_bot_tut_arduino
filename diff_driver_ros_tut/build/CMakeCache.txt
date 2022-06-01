@@ -392,6 +392,12 @@ catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
 //Value Computed by CMake
+diff_drive_bot_with_lidar_BINARY_DIR:STATIC=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar
+
+//Value Computed by CMake
+diff_drive_bot_with_lidar_SOURCE_DIR:STATIC=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_drive_bot_with_lidar
+
+//Value Computed by CMake
 diffdrivebot_BINARY_DIR:STATIC=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diffdrivebot
 
 //Value Computed by CMake
@@ -687,7 +693,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
