@@ -133,6 +133,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/gtest/cmake_install.cmake")
   include("/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/odom_publisher/cmake_install.cmake")
   include("/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/tick_publisher/cmake_install.cmake")
+  include("/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diffdrivebot/cmake_install.cmake")
 
 endif()
 

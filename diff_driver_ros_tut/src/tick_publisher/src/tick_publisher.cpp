@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     std_msgs::String msg;
 
     std::stringstream ss;
-    ss << "12,12,100\n";
+    ss << "12,10,100\n";
     msg.data = ss.str();
 
     // ROS_INFO("%s", msg.data.c_str());
