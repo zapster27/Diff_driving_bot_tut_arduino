@@ -8,17 +8,17 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="-0.0053990623924606 -0.00202726410040596 0.000854930489926943"
+        xyz="-0.0053991 -0.0020273 0.00085493"
         rpy="0 0 0" />
       <mass
-        value="2.77638109182328" />
+        value="2.7764" />
       <inertia
-        ixx="0.00948784051144306"
-        ixy="6.63406828267112E-06"
-        ixz="-0.000249360576627683"
-        iyy="0.0184790006981357"
-        iyz="7.24277999880761E-05"
-        izz="0.0243022838556667" />
+        ixx="0.0094878"
+        ixy="6.6341E-06"
+        ixz="-0.00024936"
+        iyy="0.018479"
+        iyz="7.2428E-05"
+        izz="0.024302" />
     </inertial>
     <visual>
       <origin
@@ -31,7 +31,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -48,17 +48,17 @@
     name="left_link">
     <inertial>
       <origin
-        xyz="0 -0.0190218340611354 0"
+        xyz="0 -0.019022 0"
         rpy="0 0 0" />
       <mass
-        value="0.215827415301619" />
+        value="0.21583" />
       <inertia
-        ixx="0.000123433445533082"
-        ixy="7.83452221612012E-22"
-        ixz="2.73872631878343E-21"
-        iyy="0.00019474241985751"
-        iyz="-2.20269327702413E-21"
-        izz="0.000123433445533082" />
+        ixx="0.00012343"
+        ixy="7.8345E-22"
+        ixz="2.7387E-21"
+        iyy="0.00019474"
+        iyz="-2.2027E-21"
+        izz="0.00012343" />
     </inertial>
     <visual>
       <origin
@@ -71,7 +71,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -88,7 +88,7 @@
     name="left_wheel"
     type="continuous">
     <origin
-      xyz="-0.138666895478107 0.139916380652366 -0.042"
+      xyz="-0.13867 0.13992 -0.042"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -157,20 +157,20 @@
       velocity="10" />
   </joint>
   <link
-    name="lidar_base_link">
+    name="lidar_link">
     <inertial>
       <origin
-        xyz="0.000770143208244405 9.13050673398592E-05 0.00538459519764828"
+        xyz="0 0 0"
         rpy="0 0 0" />
       <mass
-        value="1.33982083389145" />
+        value="0" />
       <inertia
-        ixx="0.0006362630403681"
-        ixy="-8.02177273880017E-07"
-        ixz="-0.000158331117915163"
-        iyy="0.000987772574098984"
-        iyz="3.05694464144642E-06"
-        izz="0.0011146309302405" />
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
     </inertial>
     <visual>
       <origin
@@ -178,12 +178,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://diff_drive_bot_with_lidar/meshes/lidar_base_link.STL" />
+          filename="package://diff_drive_bot_with_lidar/meshes/lidar_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="1 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -192,77 +192,21 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://diff_drive_bot_with_lidar/meshes/lidar_base_link.STL" />
+          filename="package://diff_drive_bot_with_lidar/meshes/lidar_link.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="lidar_base_joint"
+    name="lidar_joint"
     type="fixed">
     <origin
-      xyz="-0.010334 -0.0035917 0.1"
+      xyz="-0.0028128 -0.004107 0.1281"
       rpy="0 0 -0.053034" />
     <parent
       link="base_link" />
     <child
-      link="lidar_base_link" />
+      link="lidar_link" />
     <axis
       xyz="0 0 0" />
-  </joint>
-  <link
-    name="lidar_rot_link">
-    <inertial>
-      <origin
-        xyz="-5.16946132002646E-05 9.61182608804597E-05 -0.0141231381853937"
-        rpy="0 0 0" />
-      <mass
-        value="0.838797463919277" />
-      <inertia
-        ixx="0.000311324977727034"
-        ixy="-1.70261713337164E-07"
-        ixz="-3.08153674158862E-08"
-        iyy="0.000311549492076468"
-        iyz="5.84073905617686E-08"
-        izz="0.000513492578102435" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://diff_drive_bot_with_lidar/meshes/lidar_rot_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://diff_drive_bot_with_lidar/meshes/lidar_rot_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="lidar_rot_joint"
-    type="continuous">
-    <origin
-      xyz="-0.0027573 -0.0040961 0.1281"
-      rpy="0 0 -0.053034" />
-    <parent
-      link="base_link" />
-    <child
-      link="lidar_rot_link" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      effort="1"
-      velocity="1" />
   </joint>
 </robot>
