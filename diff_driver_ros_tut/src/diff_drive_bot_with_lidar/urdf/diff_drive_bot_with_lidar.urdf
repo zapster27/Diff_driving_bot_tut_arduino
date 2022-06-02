@@ -95,7 +95,7 @@
     <child
       link="left_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
       effort="1"
       velocity="10" />
@@ -104,17 +104,17 @@
     name="right_link">
     <inertial>
       <origin
-        xyz="-2.7756E-17 0.019022 6.245E-17"
+        xyz="-2.77555756156289E-17 0.0190218340611352 6.24500451351651E-17"
         rpy="0 0 0" />
       <mass
-        value="0.21583" />
+        value="0.215827415301619" />
       <inertia
-        ixx="0.00012343"
-        ixy="1.0379E-19"
-        ixz="6.8567E-21"
-        iyy="0.00019474"
-        iyz="2.451E-21"
-        izz="0.00012343" />
+        ixx="0.000123433445533082"
+        ixy="1.037934886211E-19"
+        ixz="6.85672450250494E-21"
+        iyy="0.00019474241985751"
+        iyz="2.45101844653965E-21"
+        izz="0.000123433445533082" />
     </inertial>
     <visual>
       <origin
@@ -127,7 +127,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -151,40 +151,62 @@
     <child
       link="right_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
       effort="1"
       velocity="10" />
   </joint>
-
-  <gazebo>
-      <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
-          <rosDebugLevel>Debug</rosDebugLevel>
-          <publishWheelTF>false</publishWheelTF>
-          <robotNamespace>/</robotNamespace>
-          <publishTf>1</publishTf>
-          <publishWheelJointState>false</publishWheelJointState>
-          <alwaysOn>true</alwaysOn>
-          <updateRate>100.0</updateRate>
-          <leftJoint>left_wheel</leftJoint>
-          <rightJoint>right_wheel</rightJoint>
-          <wheelSeparation>0.341</wheelSeparation>
-          <wheelDiameter>.17</wheelDiameter>
-          <broadcastTF>1</broadcastTF>
-          <wheelTorque>200</wheelTorque>
-          <wheelAcceleration>10</wheelAcceleration>
-          <commandTopic>cmd_vel</commandTopic>
-          <odometryFrame>odom</odometryFrame>
-          <odometryTopic>odom</odometryTopic>
-          <pose_covariance_diagonal>[1.0, 1.0, 0.0, 0.0, 0.0, 1.0]</pose_covariance_diagonal>
-          <twist_covariance_diagonal>[0.01, 0.0, 0.0, 0.0, 0.0, 0.1]</twist_covariance_diagonal>
-          <gaussianNoise>0.05</gaussianNoise>
-          <robotBaseFrame>base_link</robotBaseFrame>
-          <legacyMode>false</legacyMode>
-          <publishOdomTF>true</publishOdomTF>
-          <odometrySource>world</odometrySource>
-      </plugin>
-    </gazebo>
-
-
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0028128 -0.004107 0.1281"
+      rpy="0 0 -0.053034" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
 </robot>
