@@ -12,3 +12,4 @@ foreach(dir config launch meshes urdf)
 	install(DIRECTORY ${dir}/
 		DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)
+add_library(lidar_plugin plugins/lidar_plugin.cc)
