@@ -156,6 +156,38 @@
       effort="1"
       velocity="10" />
   </joint>
+<<<<<<< HEAD
+  <gazebo>
+      <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+          <rosDebugLevel>Debug</rosDebugLevel>
+          <publishWheelTF>false</publishWheelTF>
+          <robotNamespace>/</robotNamespace>
+          <publishTf>1</publishTf>
+          <publishWheelJointState>false</publishWheelJointState>
+          <alwaysOn>true</alwaysOn>
+          <updateRate>100.0</updateRate>
+          <leftJoint>left_wheel</leftJoint>
+          <rightJoint>right_wheel</rightJoint>
+          <wheelSeparation>0.341</wheelSeparation>
+          <wheelDiameter>.17</wheelDiameter>
+          <broadcastTF>1</broadcastTF>
+          <wheelTorque>200</wheelTorque>
+          <wheelAcceleration>10</wheelAcceleration>
+          <commandTopic>cmd_vel</commandTopic>
+          <odometryFrame>odom</odometryFrame>
+          <odometryTopic>odom</odometryTopic>
+          <pose_covariance_diagonal>[1.0, 1.0, 0.0, 0.0, 0.0, 1.0]</pose_covariance_diagonal>
+          <twist_covariance_diagonal>[0.01, 0.0, 0.0, 0.0, 0.0, 0.1]</twist_covariance_diagonal>
+          <gaussianNoise>0.05</gaussianNoise>
+          <robotBaseFrame>base_link</robotBaseFrame>
+          <legacyMode>false</legacyMode>
+          <publishOdomTF>true</publishOdomTF>
+          <odometrySource>world</odometrySource>
+      </plugin>
+    </gazebo>
+
+
+=======
   <link
     name="lidar_link">
     <inertial>
@@ -209,4 +241,5 @@
     <axis
       xyz="0 0 0" />
   </joint>
+>>>>>>> b4f2ebbbab2840ebb37c539830d365bd952bdc3f
 </robot>
