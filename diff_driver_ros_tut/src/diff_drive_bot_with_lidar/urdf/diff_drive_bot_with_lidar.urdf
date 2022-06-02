@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="diff_drive_bot_with_lidar">
   <link
@@ -93,7 +95,7 @@
     <child
       link="left_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
       effort="1"
       velocity="10" />
@@ -149,15 +151,11 @@
     <child
       link="right_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
       effort="1"
       velocity="10" />
   </joint>
-<<<<<<< HEAD
-
-=======
->>>>>>> 91a2b69148919b0dd119b143ea97c7d3ea9af27d
   <link
     name="lidar_base_link">
     <inertial>
@@ -198,13 +196,6 @@
       </geometry>
     </collision>
   </link>
-
-  <gazebo reference="lidar_rot">
-    <material>Gazebo/RedGlow</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-  </gazebo>
-
   <joint
     name="lidar_base_joint"
     type="fixed">
@@ -216,42 +207,8 @@
     <child
       link="lidar_base_link" />
     <axis
-      xyz="0 0 1" />
-    <limit
-      effort="1"
-      velocity="10" />
+      xyz="0 0 0" />
   </joint>
-
-
-  <gazebo>
-      <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
-          <rosDebugLevel>Debug</rosDebugLevel>
-          <publishWheelTF>false</publishWheelTF>
-          <robotNamespace>/</robotNamespace>
-          <publishTf>1</publishTf>
-          <publishWheelJointState>false</publishWheelJointState>
-          <alwaysOn>true</alwaysOn>
-          <updateRate>100.0</updateRate>
-          <leftJoint>left_wheel</leftJoint>
-          <rightJoint>right_wheel</rightJoint>
-          <wheelSeparation>0.341</wheelSeparation>
-          <wheelDiameter>.17</wheelDiameter>
-          <broadcastTF>1</broadcastTF>
-          <wheelTorque>200</wheelTorque>
-          <wheelAcceleration>10</wheelAcceleration>
-          <commandTopic>cmd_vel</commandTopic>
-          <odometryFrame>odom</odometryFrame>
-          <odometryTopic>odom</odometryTopic>
-          <pose_covariance_diagonal>[1.0, 1.0, 0.0, 0.0, 0.0, 1.0]</pose_covariance_diagonal>
-          <twist_covariance_diagonal>[0.01, 0.0, 0.0, 0.0, 0.0, 0.1]</twist_covariance_diagonal>
-          <gaussianNoise>0.05</gaussianNoise>
-          <robotBaseFrame>base_link</robotBaseFrame>
-          <legacyMode>false</legacyMode>
-          <publishOdomTF>true</publishOdomTF>
-          <odometrySource>world</odometrySource>
-      </plugin>
-    </gazebo>
-
   <link
     name="lidar_rot_link">
     <inertial>
