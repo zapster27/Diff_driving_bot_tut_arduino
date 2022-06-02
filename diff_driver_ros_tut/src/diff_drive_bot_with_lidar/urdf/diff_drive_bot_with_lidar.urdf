@@ -206,13 +206,8 @@
   </gazebo>
 
   <joint
-<<<<<<< HEAD
-    name="lidar_joint"
-    type="continuous">
-=======
     name="lidar_base_joint"
     type="fixed">
->>>>>>> 91a2b69148919b0dd119b143ea97c7d3ea9af27d
     <origin
       xyz="-0.010334 -0.0035917 0.1"
       rpy="0 0 -0.053034" />
@@ -226,7 +221,6 @@
       effort="1"
       velocity="10" />
   </joint>
-<<<<<<< HEAD
 
 
   <gazebo>
@@ -258,7 +252,6 @@
       </plugin>
     </gazebo>
 
-=======
   <link
     name="lidar_rot_link">
     <inertial>
@@ -315,5 +308,4 @@
       effort="1"
       velocity="1" />
   </joint>
->>>>>>> 91a2b69148919b0dd119b143ea97c7d3ea9af27d
 </robot>
