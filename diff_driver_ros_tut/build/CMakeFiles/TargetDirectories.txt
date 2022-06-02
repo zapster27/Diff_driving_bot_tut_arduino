@@ -96,6 +96,14 @@
 /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/tick_publisher/CMakeFiles/edit_cache.dir
 /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/tick_publisher/CMakeFiles/test.dir
 /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/tick_publisher/CMakeFiles/tick_publisher.dir
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/CMakeFiles/install/strip.dir
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/CMakeFiles/install/local.dir
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/CMakeFiles/install.dir
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/CMakeFiles/list_install_components.dir
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/CMakeFiles/rebuild_cache.dir
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/CMakeFiles/edit_cache.dir
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/CMakeFiles/test.dir
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir
 /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diffdrivebot/CMakeFiles/install/strip.dir
 /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diffdrivebot/CMakeFiles/install/local.dir
 /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diffdrivebot/CMakeFiles/install.dir
@@ -103,4 +111,3 @@
 /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diffdrivebot/CMakeFiles/rebuild_cache.dir
 /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diffdrivebot/CMakeFiles/edit_cache.dir
 /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diffdrivebot/CMakeFiles/test.dir
-/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir

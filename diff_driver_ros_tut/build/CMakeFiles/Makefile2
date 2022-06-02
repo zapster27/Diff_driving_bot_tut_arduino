@@ -56,6 +56,7 @@ CMAKE_BINARY_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_r
 all: gtest/all
 all: odom_publisher/all
 all: tick_publisher/all
+all: diff_drive_bot_with_lidar/all
 all: diffdrivebot/all
 
 .PHONY : all
@@ -64,6 +65,7 @@ all: diffdrivebot/all
 preinstall: gtest/preinstall
 preinstall: odom_publisher/preinstall
 preinstall: tick_publisher/preinstall
+preinstall: diff_drive_bot_with_lidar/preinstall
 preinstall: diffdrivebot/preinstall
 
 .PHONY : preinstall
@@ -77,9 +79,28 @@ clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: odom_publisher/clean
 clean: tick_publisher/clean
+clean: diff_drive_bot_with_lidar/clean
 clean: diffdrivebot/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory diff_drive_bot_with_lidar
+
+# Recursive "all" directory target.
+diff_drive_bot_with_lidar/all:
+
+.PHONY : diff_drive_bot_with_lidar/all
+
+# Recursive "preinstall" directory target.
+diff_drive_bot_with_lidar/preinstall:
+
+.PHONY : diff_drive_bot_with_lidar/preinstall
+
+# Recursive "clean" directory target.
+diff_drive_bot_with_lidar/clean: diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : diff_drive_bot_with_lidar/clean
 
 #=============================================================================
 # Directory level rules for directory diffdrivebot
@@ -95,7 +116,7 @@ diffdrivebot/preinstall:
 .PHONY : diffdrivebot/preinstall
 
 # Recursive "clean" directory target.
-diffdrivebot/clean: diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/clean
+diffdrivebot/clean:
 
 .PHONY : diffdrivebot/clean
 
@@ -1751,31 +1772,31 @@ tick_publisher/CMakeFiles/tick_publisher.dir/clean:
 .PHONY : tick_publisher/CMakeFiles/tick_publisher.dir/clean
 
 #=============================================================================
-# Target rules for target diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir
+# Target rules for target diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir
 
 # All Build rule for target.
-diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/build.make diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/build.make diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/build
+diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/build.make diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/build.make diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/all
+.PHONY : diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/all
 
 # Build rule for subdir invocation for target.
-diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/CMakeFiles 0
-.PHONY : diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/rule
+_catkin_empty_exported_target: diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 .PHONY : _catkin_empty_exported_target
 
 # clean rule for target.
-diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/build.make diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/clean
+diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/build.make diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

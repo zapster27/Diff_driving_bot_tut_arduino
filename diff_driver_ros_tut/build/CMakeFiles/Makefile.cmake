@@ -13,12 +13,15 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin/catkin_generated/version/package.cmake"
   "catkin_generated/installspace/_setup_util.py"
   "catkin_generated/order_packages.cmake"
+  "diff_drive_bot_with_lidar/catkin_generated/package.cmake"
   "diffdrivebot/catkin_generated/package.cmake"
   "odom_publisher/catkin_generated/ordered_paths.cmake"
   "odom_publisher/catkin_generated/package.cmake"
   "tick_publisher/catkin_generated/ordered_paths.cmake"
   "tick_publisher/catkin_generated/package.cmake"
   "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/CMakeLists.txt"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/CMakeLists.txt"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/package.xml"
   "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diffdrivebot/CMakeLists.txt"
   "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diffdrivebot/package.xml"
   "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/odom_publisher/CMakeLists.txt"
@@ -240,6 +243,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "odom_publisher/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tick_publisher/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "diff_drive_bot_with_lidar/CMakeFiles/CMakeDirectoryInformation.cmake"
   "diffdrivebot/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -301,5 +305,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "odom_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "odom_publisher/CMakeFiles/geometry_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "tick_publisher/CMakeFiles/tick_publisher.dir/DependInfo.cmake"
-  "diffdrivebot/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake"
+  "diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake"
   )
