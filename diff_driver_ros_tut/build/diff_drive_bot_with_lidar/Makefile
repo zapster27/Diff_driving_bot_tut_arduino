@@ -68,6 +68,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -123,18 +135,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/CMakeFiles /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/CMakeFiles/progress.marks
@@ -168,21 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/rule:
-	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/rule
-.PHONY : diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/rule
-
-# Convenience name for target.
-lidar_plugin: diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/rule
-
-.PHONY : lidar_plugin
-
-# fast build rule for target.
-lidar_plugin/fast:
-	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/build.make diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/build
-.PHONY : lidar_plugin/fast
-
-# Convenience name for target.
 diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/rule:
 	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f CMakeFiles/Makefile2 diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/rule
@@ -197,33 +182,6 @@ _catkin_empty_exported_target/fast:
 	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/build.make diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
-plugins/lidar_plugin.o: plugins/lidar_plugin.cc.o
-
-.PHONY : plugins/lidar_plugin.o
-
-# target to build an object file
-plugins/lidar_plugin.cc.o:
-	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/build.make diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/plugins/lidar_plugin.cc.o
-.PHONY : plugins/lidar_plugin.cc.o
-
-plugins/lidar_plugin.i: plugins/lidar_plugin.cc.i
-
-.PHONY : plugins/lidar_plugin.i
-
-# target to preprocess a source file
-plugins/lidar_plugin.cc.i:
-	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/build.make diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/plugins/lidar_plugin.cc.i
-.PHONY : plugins/lidar_plugin.cc.i
-
-plugins/lidar_plugin.s: plugins/lidar_plugin.cc.s
-
-.PHONY : plugins/lidar_plugin.s
-
-# target to generate assembly for a file
-plugins/lidar_plugin.cc.s:
-	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(MAKE) -f diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/build.make diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/plugins/lidar_plugin.cc.s
-.PHONY : plugins/lidar_plugin.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -231,17 +189,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... install/local"
-	@echo "... lidar_plugin"
 	@echo "... _catkin_empty_exported_target"
-	@echo "... plugins/lidar_plugin.o"
-	@echo "... plugins/lidar_plugin.i"
-	@echo "... plugins/lidar_plugin.s"
 .PHONY : help
 
 

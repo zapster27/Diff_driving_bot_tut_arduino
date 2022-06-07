@@ -17,11 +17,11 @@ double W = 0;
 
 double QW = 0, QX = 0, QY = 0, QZ = 0;
 geometry_msgs::Quaternion odom_quat;
-
-template <typename T>
 const int BASE_LINK_TO_WHEELS_X = 138.67/1000;
 const int BASE_LINK_TO_WHEELS_Y = 0;
 const int BASE_LINK_TO_WHEELS_Z = (42-25.4)/1000;
+
+template <typename T>
 int sign(T val)
 {
   return (T(0) < val) - (val < T(0));

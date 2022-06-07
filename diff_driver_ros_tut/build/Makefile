@@ -896,19 +896,6 @@ tick_publisher/fast:
 .PHONY : tick_publisher/fast
 
 #=============================================================================
-# Target rules for targets named lidar_plugin
-
-# Build rule for target.
-lidar_plugin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lidar_plugin
-.PHONY : lidar_plugin
-
-# fast build rule for target.
-lidar_plugin/fast:
-	$(MAKE) -f diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/build.make diff_drive_bot_with_lidar/CMakeFiles/lidar_plugin.dir/build
-.PHONY : lidar_plugin/fast
-
-#=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
 
 # Build rule for target.
@@ -990,7 +977,6 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... tick_publisher"
-	@echo "... lidar_plugin"
 	@echo "... _catkin_empty_exported_target"
 .PHONY : help
 

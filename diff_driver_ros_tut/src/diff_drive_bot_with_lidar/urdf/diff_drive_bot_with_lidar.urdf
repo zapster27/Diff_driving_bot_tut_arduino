@@ -4,6 +4,7 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="diff_drive_bot_with_lidar">
+  <!-- Base Link -->
   <link
     name="base_link">
     <inertial>
@@ -44,6 +45,7 @@
       </geometry>
     </collision>
   </link>
+  <!-- Left Wheel Link -->
   <link
     name="left_link">
     <inertial>
@@ -84,6 +86,7 @@
       </geometry>
     </collision>
   </link>
+  <!-- left Wheel Joint -->
   <joint
     name="left_wheel"
     type="continuous">
@@ -95,11 +98,12 @@
     <child
       link="left_link" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
       effort="1"
       velocity="10" />
   </joint>
+  <!-- Right Wheel Link -->
   <link
     name="right_link">
     <inertial>
@@ -140,6 +144,7 @@
       </geometry>
     </collision>
   </link>
+  <!-- Right Wheel Joint -->
   <joint
     name="right_wheel"
     type="continuous">
@@ -151,11 +156,12 @@
     <child
       link="right_link" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
       effort="1"
       velocity="10" />
   </joint>
+  <!-- Lidar Base Link -->
   <link
     name="lidar_base_link">
     <inertial>
@@ -196,6 +202,7 @@
       </geometry>
     </collision>
   </link>
+  <!-- Lidar Base Joint -->
   <joint
     name="lidar_base_joint"
     type="fixed">
@@ -209,6 +216,8 @@
     <axis
       xyz="0 0 0" />
   </joint>
+
+  <!-- Lidar Rotor Link -->
   <link
     name="lidar_rot_link">
     <inertial>
@@ -249,6 +258,7 @@
       </geometry>
     </collision>
   </link>
+  <!-- Lidar Rotor Joint -->
   <joint
     name="lidar_rot_joint"
     type="continuous">
@@ -265,4 +275,72 @@
       effort="1"
       velocity="1" />
   </joint>
+  <!-- Lidar Rotor Reference -->
+  <gazebo reference="lidar_rot_link">
+    <material>Gazebo/RedGlow</material>
+    <mu1>0</mu1>
+    <mu2>0</mu2>
+    <sensor type="ray" name="lidar">
+      <always_on>true</always_on>
+      <pose>0.035 0 -0.0125 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>400</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>  
+        <range>
+          <min>0.15</min>
+          <max>6.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+
+      <!-- <plugin name="gazebo_ros_head_rplidar_controller" filename="libgazebo_ros_gpu_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>lidar_rot_link</frameName>
+
+      </plugin> -->
+    </sensor>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <rosDebugLevel>Debug</rosDebugLevel>
+      <publishWheelTF>false</publishWheelTF>
+      <robotNamespace>/</robotNamespace>
+      <publishTf>1</publishTf>
+      <publishWheelJointState>false</publishWheelJointState>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <leftJoint>left_wheel</leftJoint>
+      <rightJoint>right_wheel</rightJoint>
+      <wheelSeparation>0.341</wheelSeparation>
+      <wheelDiameter>.17</wheelDiameter>
+      <broadcastTF>1</broadcastTF>
+      <wheelTorque>200</wheelTorque>
+      <wheelAcceleration>10</wheelAcceleration>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryTopic>odom</odometryTopic>
+      <pose_covariance_diagonal>[1.0, 1.0, 0.0, 0.0, 0.0, 1.0]</pose_covariance_diagonal>
+      <twist_covariance_diagonal>[0.01, 0.0, 0.0, 0.0, 0.0, 0.1]</twist_covariance_diagonal>
+      <gaussianNoise>0.05</gaussianNoise>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <legacyMode>false</legacyMode>
+      <publishOdomTF>true</publishOdomTF>
+      <odometrySource>world</odometrySource>
+    </plugin>
+  </gazebo>
+
 </robot>
