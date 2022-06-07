@@ -19,6 +19,9 @@ double QW = 0, QX = 0, QY = 0, QZ = 0;
 geometry_msgs::Quaternion odom_quat;
 
 template <typename T>
+const int BASE_LINK_TO_WHEELS_X = 138.67/1000;
+const int BASE_LINK_TO_WHEELS_Y = 0;
+const int BASE_LINK_TO_WHEELS_Z = (42-25.4)/1000;
 int sign(T val)
 {
   return (T(0) < val) - (val < T(0));
@@ -120,8 +123,8 @@ int main(int argc, char **argv)
     odom_trans.header.frame_id = "odom";
     odom_trans.child_frame_id = "base_link";
 
-    odom_trans.transform.translation.x = X;
-    odom_trans.transform.translation.y = Y;
+    odom_trans.transform.translation.x = X + BASE_LINK_TO_WHEELS_X;
+    odom_trans.transform.translation.y = Y + BASE_LINK_TO_WHEELS_Y;
     odom_trans.transform.translation.z = 0.0;
     odom_trans.transform.rotation = odom_quat;
 
