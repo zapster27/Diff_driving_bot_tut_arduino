@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="diff_drive_bot_with_lidar">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.133267833085647 -0.000943644752771568 0.00085493048992695"
+        rpy="0 0 0" />
+      <mass
+        value="2.77638109182328" />
+      <inertia
+        ixx="0.00948784051144306"
+        ixy="6.63406828267113E-06"
+        ixz="-0.000249360576627683"
+        iyy="0.0184790006981357"
+        iyz="7.24277999880761E-05"
+        izz="0.0243022838556667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_link">
+    <inertial>
+      <origin
+        xyz="0 -0.0190218340611354 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.215827415301619" />
+      <inertia
+        ixx="0.000123433445533082"
+        ixy="7.83121349366991E-22"
+        ixz="2.73874699829875E-21"
+        iyy="0.00019474241985751"
+        iyz="-2.20249562059129E-21"
+        izz="0.000123433445533082" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel"
+    type="continuous">
+    <origin
+      xyz="0 0.141 -0.042"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1"
+      velocity="10" />
+  </joint>
+  <link
+    name="right_link">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 0.0190218340611352 6.24500451351651E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.215827415301619" />
+      <inertia
+        ixx="0.000123433445533082"
+        ixy="1.037934886211E-19"
+        ixz="6.85672450250494E-21"
+        iyy="0.00019474241985751"
+        iyz="2.44949730112673E-21"
+        izz="0.000123433445533082" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel"
+    type="continuous">
+    <origin
+      xyz="0 -0.141 -0.042"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1"
+      velocity="10" />
+  </joint>
+  <link
+    name="lidar_base_link">
+    <inertial>
+      <origin
+        xyz="0.00077014320824441 9.13050673398597E-05 0.00538459519764831"
+        rpy="0 0 0" />
+      <mass
+        value="1.33982083389145" />
+      <inertia
+        ixx="0.0006362630403681"
+        ixy="-8.02177273879987E-07"
+        ixz="-0.000158331117915163"
+        iyy="0.000987772574098984"
+        iyz="3.05694464144642E-06"
+        izz="0.0011146309302405" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/lidar_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/lidar_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_base_joint"
+    type="fixed">
+    <origin
+      xyz="0.12833 -0.002508 0.1"
+      rpy="0 0 -0.053034" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_rot_link">
+    <inertial>
+      <origin
+        xyz="-5.16946132002646E-05 9.61182608804597E-05 -0.0141231381853937"
+        rpy="0 0 0" />
+      <mass
+        value="0.838797463919277" />
+      <inertia
+        ixx="0.000311324977727034"
+        ixy="-1.70261713337164E-07"
+        ixz="-3.08153674158862E-08"
+        iyy="0.000311549492076468"
+        iyz="5.8407390561768E-08"
+        izz="0.000513492578102435" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/lidar_rot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_drive_bot_with_lidar/meshes/lidar_rot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_rot_joint"
+    type="continuous">
+    <origin
+      xyz="0.13591 -0.0030125 0.1281"
+      rpy="0 0 -0.053034" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_rot_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+</robot>
