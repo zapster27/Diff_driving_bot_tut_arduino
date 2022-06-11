@@ -5,7 +5,7 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("diff_driver")
 subdirs("odom_publisher")
 subdirs("tick_publisher")
 subdirs("diff_drive_bot_with_lidar")
-subdirs("diffdrivebot")

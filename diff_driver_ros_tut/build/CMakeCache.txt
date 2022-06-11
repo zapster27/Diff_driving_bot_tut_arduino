@@ -398,6 +398,18 @@ diff_drive_bot_with_lidar_BINARY_DIR:STATIC=/home/pi/Documents/Diff_driving_bot_
 diff_drive_bot_with_lidar_SOURCE_DIR:STATIC=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_drive_bot_with_lidar
 
 //Value Computed by CMake
+diff_driver_BINARY_DIR:STATIC=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_driver
+
+//Value Computed by CMake
+diff_driver_SOURCE_DIR:STATIC=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_driver
+
+//Value Computed by CMake
+diff_driver_tut_BINARY_DIR:STATIC=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_driver_tut
+
+//Value Computed by CMake
+diff_driver_tut_SOURCE_DIR:STATIC=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_driver_tut
+
+//Value Computed by CMake
 diffdrivebot_BINARY_DIR:STATIC=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diffdrivebot
 
 //Value Computed by CMake
