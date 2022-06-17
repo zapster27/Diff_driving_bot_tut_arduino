@@ -1,8 +1,0 @@
-prefix=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/install
-
-Name: diff_driver_tut
-Description: Description of diff_driver_tut
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

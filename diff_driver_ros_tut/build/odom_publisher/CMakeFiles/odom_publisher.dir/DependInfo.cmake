@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/odom_publisher/src/odom_publisher.cpp" "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/odom_publisher/CMakeFiles/odom_publisher.dir/src/odom_publisher.cpp.o"
+  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/odom_publisher/src/odom_publisher.cpp" "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/odom_publisher/CMakeFiles/odom_publisher.dir/src/odom_publisher.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

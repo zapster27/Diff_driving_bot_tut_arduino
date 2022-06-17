@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src
+CMAKE_SOURCE_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build
+CMAKE_BINARY_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/build: _c
 .PHONY : diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/diff_drive_bot_with_lidar && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_drive_bot_with_lidar /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/diff_drive_bot_with_lidar /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/diff_drive_bot_with_lidar /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : diff_drive_bot_with_lidar/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

@@ -40,9 +40,9 @@ void EncoderInit() {
 // encoder event for the interrupt callS
 void leftEncoderEvent() {
   if (digitalRead(LH_ENCODER_B) > 0) {
-    leftCount--;
-  } else {
     leftCount++;
+  } else {
+    leftCount--;
   }
   //  Serial2.print("leftCount   "); Serial2.print(leftCount);
   //  Serial2.print("    rightCount   "); Serial2.println(rightCount);
@@ -50,9 +50,9 @@ void leftEncoderEvent() {
 
 void rightEncoderEvent() {
   if (digitalRead(RH_ENCODER_B) > 0) {
-    rightCount++;
-  } else {
     rightCount--;
+  } else {
+    rightCount++;
   }
   //  Serial2.print("leftCount   "); Serial2.print(leftCount);
   //  Serial2.print("    rightCount   "); Serial2.println(rightCount);

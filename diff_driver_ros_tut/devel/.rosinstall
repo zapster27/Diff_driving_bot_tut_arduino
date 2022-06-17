@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/setup.sh
+    local-name: /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/setup.sh

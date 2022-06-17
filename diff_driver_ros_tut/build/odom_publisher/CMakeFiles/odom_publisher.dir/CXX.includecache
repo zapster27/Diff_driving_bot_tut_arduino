@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/odom_publisher/src/odom_publisher.cpp
+/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/odom_publisher/src/odom_publisher.cpp
 ros/ros.h
-/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/odom_publisher/src/ros/ros.h
+/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/odom_publisher/src/ros/ros.h
 std_msgs/String.h
-/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/odom_publisher/src/std_msgs/String.h
+/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/odom_publisher/src/std_msgs/String.h
 nav_msgs/Odometry.h
-/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/odom_publisher/src/nav_msgs/Odometry.h
+/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/odom_publisher/src/nav_msgs/Odometry.h
 cstring
 -
 iostream

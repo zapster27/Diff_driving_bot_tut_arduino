@@ -1,8 +1,8 @@
-# Install script for directory: /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_drive_bot_with_lidar
+# Install script for directory: /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/diff_drive_bot_with_lidar
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,33 +38,33 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/catkin_generated/installspace/diff_drive_bot_with_lidar.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/catkin_generated/installspace/diff_drive_bot_with_lidar.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diff_drive_bot_with_lidar/cmake" TYPE FILE FILES
-    "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/catkin_generated/installspace/diff_drive_bot_with_lidarConfig.cmake"
-    "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/catkin_generated/installspace/diff_drive_bot_with_lidarConfig-version.cmake"
+    "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/catkin_generated/installspace/diff_drive_bot_with_lidarConfig.cmake"
+    "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/diff_drive_bot_with_lidar/catkin_generated/installspace/diff_drive_bot_with_lidarConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diff_drive_bot_with_lidar" TYPE FILE FILES "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diff_drive_bot_with_lidar" TYPE FILE FILES "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diff_drive_bot_with_lidar/config" TYPE DIRECTORY FILES "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/config/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diff_drive_bot_with_lidar/config" TYPE DIRECTORY FILES "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/config/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diff_drive_bot_with_lidar/launch" TYPE DIRECTORY FILES "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diff_drive_bot_with_lidar/launch" TYPE DIRECTORY FILES "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/launch/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diff_drive_bot_with_lidar/meshes" TYPE DIRECTORY FILES "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/meshes/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diff_drive_bot_with_lidar/meshes" TYPE DIRECTORY FILES "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/meshes/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diff_drive_bot_with_lidar/urdf" TYPE DIRECTORY FILES "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/urdf/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diff_drive_bot_with_lidar/urdf" TYPE DIRECTORY FILES "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/diff_drive_bot_with_lidar/urdf/")
 endif()
 
