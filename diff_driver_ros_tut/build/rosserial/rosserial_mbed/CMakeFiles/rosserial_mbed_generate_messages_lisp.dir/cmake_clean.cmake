@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/share/common-lisp/ros/rosserial_mbed/msg/Adc.lisp"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/share/common-lisp/ros/rosserial_mbed/srv/Test.lisp"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/share/common-lisp/ros/rosserial_mbed/msg/Adc.lisp"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/share/common-lisp/ros/rosserial_mbed/srv/Test.lisp"
   "CMakeFiles/rosserial_mbed_generate_messages_lisp"
 )
 

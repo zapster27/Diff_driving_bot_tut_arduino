@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src
+CMAKE_SOURCE_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build
+CMAKE_BINARY_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build
 
 # Utility rule file for rosserial_mbed_genpy.
 
@@ -63,10 +63,10 @@ rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/build: rosserial_mb
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/build
 
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/clean:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rosserial/rosserial_mbed && $(CMAKE_COMMAND) -P CMakeFiles/rosserial_mbed_genpy.dir/cmake_clean.cmake
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rosserial/rosserial_mbed && $(CMAKE_COMMAND) -P CMakeFiles/rosserial_mbed_genpy.dir/cmake_clean.cmake
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/clean
 
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/depend:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_mbed /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rosserial/rosserial_mbed /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rosserial/rosserial_mbed /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rosserial/rosserial_mbed /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/depend
 

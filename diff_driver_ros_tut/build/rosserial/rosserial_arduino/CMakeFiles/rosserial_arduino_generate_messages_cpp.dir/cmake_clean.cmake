@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/include/rosserial_arduino/Adc.h"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/include/rosserial_arduino/Test.h"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/include/rosserial_arduino/Adc.h"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/include/rosserial_arduino/Test.h"
   "CMakeFiles/rosserial_arduino_generate_messages_cpp"
 )
 

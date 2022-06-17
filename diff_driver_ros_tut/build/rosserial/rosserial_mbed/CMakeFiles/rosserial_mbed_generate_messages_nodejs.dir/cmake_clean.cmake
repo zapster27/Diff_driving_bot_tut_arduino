@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/share/gennodejs/ros/rosserial_mbed/msg/Adc.js"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/share/gennodejs/ros/rosserial_mbed/srv/Test.js"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/share/gennodejs/ros/rosserial_mbed/msg/Adc.js"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/share/gennodejs/ros/rosserial_mbed/srv/Test.js"
   "CMakeFiles/rosserial_mbed_generate_messages_nodejs"
 )
 

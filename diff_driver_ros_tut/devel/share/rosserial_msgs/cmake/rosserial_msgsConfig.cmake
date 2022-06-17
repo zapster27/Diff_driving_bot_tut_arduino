@@ -67,14 +67,14 @@ set(rosserial_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(rosserial_msgs_SOURCE_PREFIX /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_msgs)
-  set(rosserial_msgs_DEVEL_PREFIX /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel)
+  set(rosserial_msgs_SOURCE_PREFIX /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rosserial/rosserial_msgs)
+  set(rosserial_msgs_DEVEL_PREFIX /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel)
   set(rosserial_msgs_INSTALL_PREFIX "")
   set(rosserial_msgs_PREFIX ${rosserial_msgs_DEVEL_PREFIX})
 else()
   set(rosserial_msgs_SOURCE_PREFIX "")
   set(rosserial_msgs_DEVEL_PREFIX "")
-  set(rosserial_msgs_INSTALL_PREFIX /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/install)
+  set(rosserial_msgs_INSTALL_PREFIX /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/install)
   set(rosserial_msgs_PREFIX ${rosserial_msgs_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(rosserial_msgs_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/include " STREQUAL " ")
+if(NOT "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/include " STREQUAL " ")
   set(rosserial_msgs_INCLUDE_DIRS "")
-  set(_include_dirs "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/include")
+  set(_include_dirs "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://ros.org/wiki/rosserial_msgs " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/
         message(FATAL_ERROR "Project 'rosserial_msgs' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'rosserial_msgs' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_msgs/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'rosserial_msgs' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rosserial/rosserial_msgs/${idir}'.  ${_report}")
     endif()
     _list_append_unique(rosserial_msgs_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib;/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

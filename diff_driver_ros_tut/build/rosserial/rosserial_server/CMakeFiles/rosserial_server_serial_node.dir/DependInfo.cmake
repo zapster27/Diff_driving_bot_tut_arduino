@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_server/src/serial_node.cpp" "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rosserial/rosserial_server/src/serial_node.cpp" "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,15 +17,15 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_server/include"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/include"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rosserial/rosserial_server/include"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rosserial/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/DependInfo.cmake"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rosserial/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

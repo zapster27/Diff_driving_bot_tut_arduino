@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src
+CMAKE_SOURCE_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build
+CMAKE_BINARY_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build
 
 # Include any dependencies generated for this target.
 include rplidar_ros/CMakeFiles/rplidarNodeClient.dir/depend.make
@@ -58,17 +58,17 @@ include rplidar_ros/CMakeFiles/rplidarNodeClient.dir/progress.make
 include rplidar_ros/CMakeFiles/rplidarNodeClient.dir/flags.make
 
 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/flags.make
-rplidar_ros/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o: /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rplidar_ros/src/client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object rplidar_ros/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o"
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rplidar_ros && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o -c /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rplidar_ros/src/client.cpp
+rplidar_ros/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o: /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rplidar_ros/src/client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object rplidar_ros/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o"
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rplidar_ros && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o -c /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rplidar_ros/src/client.cpp
 
 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rplidarNodeClient.dir/src/client.cpp.i"
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rplidar_ros && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rplidar_ros/src/client.cpp > CMakeFiles/rplidarNodeClient.dir/src/client.cpp.i
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rplidar_ros && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rplidar_ros/src/client.cpp > CMakeFiles/rplidarNodeClient.dir/src/client.cpp.i
 
 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rplidarNodeClient.dir/src/client.cpp.s"
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rplidar_ros && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rplidar_ros/src/client.cpp -o CMakeFiles/rplidarNodeClient.dir/src/client.cpp.s
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rplidar_ros && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rplidar_ros/src/client.cpp -o CMakeFiles/rplidarNodeClient.dir/src/client.cpp.s
 
 # Object files for target rplidarNodeClient
 rplidarNodeClient_OBJECTS = \
@@ -77,39 +77,39 @@ rplidarNodeClient_OBJECTS = \
 # External object files for target rplidarNodeClient
 rplidarNodeClient_EXTERNAL_OBJECTS =
 
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libroscpp.so
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/aarch64-linux-gnu/libpthread.so
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole.so
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librostime.so
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libcpp_common.so
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient"
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rplidar_ros && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rplidarNodeClient.dir/link.txt --verbose=$(VERBOSE)
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libroscpp.so
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole.so
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librostime.so
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libcpp_common.so
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient"
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rplidar_ros && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rplidarNodeClient.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build: /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient
+rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build: /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rplidar_ros/rplidarNodeClient
 
 .PHONY : rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build
 
 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/clean:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rplidar_ros && $(CMAKE_COMMAND) -P CMakeFiles/rplidarNodeClient.dir/cmake_clean.cmake
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rplidar_ros && $(CMAKE_COMMAND) -P CMakeFiles/rplidarNodeClient.dir/cmake_clean.cmake
 .PHONY : rplidar_ros/CMakeFiles/rplidarNodeClient.dir/clean
 
 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/depend:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rplidar_ros /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rplidar_ros /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rplidar_ros/CMakeFiles/rplidarNodeClient.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rplidar_ros /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rplidar_ros /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rplidar_ros/CMakeFiles/rplidarNodeClient.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rplidar_ros/CMakeFiles/rplidarNodeClient.dir/depend
 

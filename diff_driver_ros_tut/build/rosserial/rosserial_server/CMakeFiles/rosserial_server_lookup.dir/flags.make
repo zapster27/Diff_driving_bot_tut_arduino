@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"rosserial_server\" -Drosserial_server_lookup_EXPORTS
 
-CXX_INCLUDES = -I/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_server/include -I/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/python3.8 
+CXX_INCLUDES = -I/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rosserial/rosserial_server/include -I/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/python3.8 
 

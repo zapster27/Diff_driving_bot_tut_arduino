@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src
+CMAKE_SOURCE_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build
+CMAKE_BINARY_DIR = /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build
 
 # Utility rule file for _run_tests_rosserial_client.
 
@@ -63,10 +63,10 @@ rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/build: _ru
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/build
 
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/clean:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rosserial/rosserial_client && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_rosserial_client.dir/cmake_clean.cmake
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rosserial/rosserial_client && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_rosserial_client.dir/cmake_clean.cmake
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/clean
 
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/depend:
-	cd /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_client /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rosserial/rosserial_client /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rosserial/rosserial_client /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rosserial/rosserial_client /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/depend
 

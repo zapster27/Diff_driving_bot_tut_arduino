@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/tick_publisher/src/tick_publisher.cpp" "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/tick_publisher/CMakeFiles/tick_publisher.dir/src/tick_publisher.cpp.o"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/tick_publisher/src/tick_publisher.cpp" "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/tick_publisher/CMakeFiles/tick_publisher.dir/src/tick_publisher.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

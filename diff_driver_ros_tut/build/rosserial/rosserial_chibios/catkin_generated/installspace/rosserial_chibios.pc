@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/install
+prefix=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/install
 
 Name: rosserial_chibios
 Description: Description of rosserial_chibios

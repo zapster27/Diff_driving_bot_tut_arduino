@@ -1,10 +1,13 @@
 # CMake generated Testfile for 
-# Source directory: /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src
-# Build directory: /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build
+# Source directory: /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src
+# Build directory: /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("hector_slam/hector_geotiff_launch")
+subdirs("hector_slam/hector_slam")
+subdirs("hector_slam/hector_slam_launch")
 subdirs("rosserial/rosserial")
 subdirs("rosserial/rosserial_arduino")
 subdirs("rosserial/rosserial_chibios")
@@ -16,12 +19,23 @@ subdirs("rosserial/rosserial_vex_cortex")
 subdirs("rosserial/rosserial_vex_v5")
 subdirs("rosserial/rosserial_xbee")
 subdirs("rosserial/rosserial_client")
+subdirs("hector_slam/hector_map_tools")
+subdirs("hector_slam/hector_nav_msgs")
 subdirs("diff_driver")
+subdirs("hector_slam/hector_geotiff")
+subdirs("hector_slam/hector_geotiff_plugins")
+subdirs("hector_slam/hector_marker_drawing")
 subdirs("odom_publisher")
 subdirs("tick_publisher")
 subdirs("rosserial/rosserial_server")
+subdirs("hector_slam/hector_compressed_map_transport")
 subdirs("rplidar_ros")
+subdirs("hector_slam/hector_imu_attitude_to_tf")
+subdirs("hector_slam/hector_imu_tools")
+subdirs("hector_slam/hector_map_server")
+subdirs("hector_slam/hector_trajectory_server")
 subdirs("rosserial/rosserial_embeddedlinux")
 subdirs("rosserial/rosserial_test")
 subdirs("rosserial/rosserial_windows")
+subdirs("hector_slam/hector_mapping")
 subdirs("diff_drive_bot_with_lidar")

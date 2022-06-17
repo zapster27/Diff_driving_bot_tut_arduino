@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/librosserial_server_lookup.pdb"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/librosserial_server_lookup.so"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/librosserial_server_lookup.pdb"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/librosserial_server_lookup.so"
   "CMakeFiles/rosserial_server_lookup.dir/src/msg_lookup.cpp.o"
 )
 

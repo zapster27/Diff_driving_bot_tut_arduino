@@ -2,7 +2,7 @@
 DEVELSPACE = 'TRUE' == 'TRUE'
 INSTALLSPACE = 'FALSE' == 'TRUE'
 
-CATKIN_DEVEL_PREFIX = '/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel'
+CATKIN_DEVEL_PREFIX = '/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel'
 
 CATKIN_GLOBAL_BIN_DESTINATION = 'bin'
 CATKIN_GLOBAL_ETC_DESTINATION = 'etc'
@@ -20,14 +20,14 @@ CATKIN_PACKAGE_LIBEXEC_DESTINATION = 'lib/rosserial_tivac'
 CATKIN_PACKAGE_PYTHON_DESTINATION = 'lib/python3/dist-packages/rosserial_tivac'
 CATKIN_PACKAGE_SHARE_DESTINATION = 'share/rosserial_tivac'
 
-CMAKE_BINARY_DIR = '/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build'
-CMAKE_CURRENT_BINARY_DIR = '/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rosserial/rosserial_tivac'
-CMAKE_CURRENT_SOURCE_DIR = '/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_tivac'
-CMAKE_INSTALL_PREFIX = '/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/install'
-CMAKE_SOURCE_DIR = '/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src'
+CMAKE_BINARY_DIR = '/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build'
+CMAKE_CURRENT_BINARY_DIR = '/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rosserial/rosserial_tivac'
+CMAKE_CURRENT_SOURCE_DIR = '/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rosserial/rosserial_tivac'
+CMAKE_INSTALL_PREFIX = '/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/install'
+CMAKE_SOURCE_DIR = '/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src'
 
-PKG_CMAKE_DIR = '/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/share/rosserial_tivac/cmake'
+PKG_CMAKE_DIR = '/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/share/rosserial_tivac/cmake'
 
 PROJECT_NAME = 'rosserial_tivac'
-PROJECT_BINARY_DIR = '/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rosserial/rosserial_tivac'
-PROJECT_SOURCE_DIR = '/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_tivac'
+PROJECT_BINARY_DIR = '/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rosserial/rosserial_tivac'
+PROJECT_SOURCE_DIR = '/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rosserial/rosserial_tivac'

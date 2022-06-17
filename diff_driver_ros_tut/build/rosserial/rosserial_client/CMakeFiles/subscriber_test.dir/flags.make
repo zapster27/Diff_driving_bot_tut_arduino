@@ -6,5 +6,5 @@ CXX_FLAGS =   -DGTEST_HAS_PTHREAD=1
 
 CXX_DEFINES = -DROS_BUILD_SHARED_LIBS=1
 
-CXX_INCLUDES = -I/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_client/src/ros_lib -I/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/include -I/opt/ros/noetic/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest 
+CXX_INCLUDES = -I/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rosserial/rosserial_client/src/ros_lib -I/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/include -I/opt/ros/noetic/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest 
 

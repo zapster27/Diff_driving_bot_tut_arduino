@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/odom_publisher/odom_publisher"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/odom_publisher/odom_publisher.pdb"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/odom_publisher/odom_publisher"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/odom_publisher/odom_publisher.pdb"
   "CMakeFiles/odom_publisher.dir/src/odom_publisher.cpp.o"
 )
 

@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/tick_publisher/src/tick_publisher.cpp
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/tick_publisher/src/tick_publisher.cpp
 ros/ros.h
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/tick_publisher/src/ros/ros.h
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/tick_publisher/src/ros/ros.h
 std_msgs/String.h
-/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/tick_publisher/src/std_msgs/String.h
+/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/tick_publisher/src/std_msgs/String.h
 sstream
 -
 

@@ -67,14 +67,14 @@ set(rosserial_client_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(rosserial_client_SOURCE_PREFIX /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_client)
-  set(rosserial_client_DEVEL_PREFIX /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel)
+  set(rosserial_client_SOURCE_PREFIX /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rosserial/rosserial_client)
+  set(rosserial_client_DEVEL_PREFIX /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel)
   set(rosserial_client_INSTALL_PREFIX "")
   set(rosserial_client_PREFIX ${rosserial_client_DEVEL_PREFIX})
 else()
   set(rosserial_client_SOURCE_PREFIX "")
   set(rosserial_client_DEVEL_PREFIX "")
-  set(rosserial_client_INSTALL_PREFIX /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/install)
+  set(rosserial_client_INSTALL_PREFIX /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/install)
   set(rosserial_client_PREFIX ${rosserial_client_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/install/lib;/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

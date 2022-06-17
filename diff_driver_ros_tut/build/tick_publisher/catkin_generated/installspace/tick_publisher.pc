@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/install
+prefix=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/install
 
 Name: tick_publisher
 Description: Description of tick_publisher

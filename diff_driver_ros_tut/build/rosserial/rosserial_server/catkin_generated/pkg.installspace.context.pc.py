@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "roscpp;rosserial_msgs;std_msgs;topic_tools".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lrosserial_server_lookup".split(';') if "-lrosserial_server_lookup" != "" else []
 PROJECT_NAME = "rosserial_server"
-PROJECT_SPACE_DIR = "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/install"
+PROJECT_SPACE_DIR = "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/install"
 PROJECT_VERSION = "0.9.2"

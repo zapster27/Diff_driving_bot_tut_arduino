@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/share/gennodejs/ros/rosserial_msgs/msg/Log.js"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/share/gennodejs/ros/rosserial_msgs/msg/TopicInfo.js"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/share/gennodejs/ros/rosserial_msgs/srv/RequestParam.js"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/share/gennodejs/ros/rosserial_msgs/msg/Log.js"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/share/gennodejs/ros/rosserial_msgs/msg/TopicInfo.js"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/share/gennodejs/ros/rosserial_msgs/srv/RequestParam.js"
   "CMakeFiles/rosserial_msgs_generate_messages_nodejs"
 )
 

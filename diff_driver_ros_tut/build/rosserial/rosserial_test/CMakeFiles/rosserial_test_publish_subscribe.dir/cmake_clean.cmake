@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rosserial_test/rosserial_test_publish_subscribe"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/rosserial_test/rosserial_test_publish_subscribe.pdb"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rosserial_test/rosserial_test_publish_subscribe"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/rosserial_test/rosserial_test_publish_subscribe.pdb"
   "CMakeFiles/rosserial_test_publish_subscribe.dir/src/publish_subscribe.cpp.o"
 )
 

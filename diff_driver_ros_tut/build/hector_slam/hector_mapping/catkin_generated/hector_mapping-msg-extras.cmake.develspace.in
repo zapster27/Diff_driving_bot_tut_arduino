@@ -1,0 +1,2 @@
+set(hector_mapping_MESSAGE_FILES "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/hector_slam/hector_mapping/msg/HectorDebugInfo.msg;/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/hector_slam/hector_mapping/msg/HectorIterData.msg")
+set(hector_mapping_SERVICE_FILES "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/hector_slam/hector_mapping/srv/ResetMapping.srv")

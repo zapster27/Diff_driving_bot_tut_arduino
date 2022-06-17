@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rplidar_ros/src/client.cpp" "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/build/rplidar_ros/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rplidar_ros/src/client.cpp" "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/build/rplidar_ros/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,8 +17,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rplidar_ros/./sdk/include"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rplidar_ros/./sdk/src"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rplidar_ros/./sdk/include"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/src/rplidar_ros/./sdk/src"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

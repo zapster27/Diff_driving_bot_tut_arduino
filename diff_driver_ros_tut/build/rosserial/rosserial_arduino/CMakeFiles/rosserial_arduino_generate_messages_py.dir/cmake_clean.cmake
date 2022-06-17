@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/python3/dist-packages/rosserial_arduino/msg/_Adc.py"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/python3/dist-packages/rosserial_arduino/msg/__init__.py"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/python3/dist-packages/rosserial_arduino/srv/_Test.py"
-  "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/devel/lib/python3/dist-packages/rosserial_arduino/srv/__init__.py"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/python3/dist-packages/rosserial_arduino/msg/_Adc.py"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/python3/dist-packages/rosserial_arduino/msg/__init__.py"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/python3/dist-packages/rosserial_arduino/srv/_Test.py"
+  "/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/python3/dist-packages/rosserial_arduino/srv/__init__.py"
   "CMakeFiles/rosserial_arduino_generate_messages_py"
 )
 
