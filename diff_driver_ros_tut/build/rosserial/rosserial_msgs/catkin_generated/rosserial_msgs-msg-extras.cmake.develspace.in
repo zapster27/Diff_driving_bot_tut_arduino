@@ -1,0 +1,2 @@
+set(rosserial_msgs_MESSAGE_FILES "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_msgs/msg/Log.msg;/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_msgs/msg/TopicInfo.msg")
+set(rosserial_msgs_SERVICE_FILES "/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/src/rosserial/rosserial_msgs/srv/RequestParam.srv")
