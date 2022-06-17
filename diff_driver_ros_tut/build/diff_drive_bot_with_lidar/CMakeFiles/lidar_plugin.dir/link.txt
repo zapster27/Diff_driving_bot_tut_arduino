@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC   -shared -Wl,-soname,liblidar_plugin.so -o /home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel/lib/liblidar_plugin.so CMakeFiles/lidar_plugin.dir/plugins/lidar_plugin.cc.o 
