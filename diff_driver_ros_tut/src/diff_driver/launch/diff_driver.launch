@@ -3,16 +3,17 @@
         name="odom_msgs"
         pkg="odom_publisher"
         type="odom_publisher"/>
-    <node
+    <!-- <node
         name="tf_footprint_base"
-        pkg="tf"
+        pkg="tf2_ros"
         type="static_transform_publisher"
-        args="0 0 0 0 0 0 base_footprint base_link 30" />
+        args="0 0 0 0 0 0 base_footprint base_link"/> -->
     <node
         name="tf_lidar_base"
-        pkg="tf"
+        pkg="tf2_ros"
         type="static_transform_publisher"
-        args="-1.94 2.91 124.75 0 0 0.05303430856192 base_link lidarlink 30" />
+        args="-1.94 2.91 124.75 3.1946269621 0 0 base_link laser"/>
+        <!-- args="-1.94 2.91 124.75 0 0 0.05303430856192 base_link laser 30" /> -->
     <!-- <node 
         type="rviz" 
         name="rviz" 

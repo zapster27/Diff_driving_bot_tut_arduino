@@ -1,0 +1,17 @@
+<launch>
+    <node name="odom_msgs" pkg="odom_publisher" type="odom_publisher">
+        <param name="port"              type="string"               value="/dev/ttyACM0"/>
+        <param name="baud"              type="int"                  value="57600"/>
+    </node>
+
+    <node
+        name="rosserial_python"
+        pkg="rosserial_python"
+        type="rosserial_python"/>
+    <node
+        name="tf_lidar_base"
+        pkg="tf2_ros"
+        type="static_transform_publisher"
+        args="-1.94 2.91 124.75 3.1946269621 0 0 base_link laser"/>
+        <!-- args="-1.94 2.91 124.75 0 0 0.05303430856192 base_link laser 30" /> -->
+</launch>

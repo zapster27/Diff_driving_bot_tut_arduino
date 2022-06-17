@@ -3,7 +3,8 @@
 #include "nav_msgs/Odometry.h"
 #include <cstring>
 #include <iostream>
-#include <tf/transform_broadcaster.h>
+#include <tf2_ros/transform_broadcaster.h>
+#include <tf2/LinearMath/Quaternion.h>
 
 float wheelDiameter = 80;
 float wheelTrack = 341;
@@ -16,7 +17,7 @@ double VX = 0,VY = 0;
 double W = 0;
 
 double QW = 0, QX = 0, QY = 0, QZ = 0;
-geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(Theta);
+tf2::Quaternion odom_quat;
 const int BASE_LINK_TO_WHEELS_X = 138.67/1000;
 const int BASE_LINK_TO_WHEELS_Y = 0;
 const int BASE_LINK_TO_WHEELS_Z = (42-25.4)/1000;
@@ -91,12 +92,14 @@ void odomCalculator(const std_msgs::String::ConstPtr &msg)
   W = dtheta * 1000 / deltaT;
   // ROS_INFO("VX: %f,VY: %f,W: %f",VX,VY,W);
 
-  odom_quat = tf::createQuaternionMsgFromYaw(Theta);
+  odom_quat.setRPY(0, 0, Theta);
   dtheta = 0;
 }
 
 int main(int argc, char **argv)
 {
+
+  odom_quat.setRPY(0, 0, 0);
   ROS_INFO("init");
   ros::init(argc, argv, "odom_pub");
   ros::NodeHandle nh;
@@ -104,7 +107,7 @@ int main(int argc, char **argv)
 
   ros::Publisher odom_publisher = nh.advertise<nav_msgs::Odometry>("odom", 1000);
   nav_msgs::Odometry odom;
-  tf::TransformBroadcaster odom_broadcaster;
+  static tf2_ros::TransformBroadcaster odom_broadcaster;
 
   ros::Rate loop_rate(33);
 
@@ -114,23 +117,29 @@ int main(int argc, char **argv)
     geometry_msgs::TransformStamped odom_trans;
     odom_trans.header.stamp = current_time;
     odom_trans.header.frame_id = "odom";
-    odom_trans.child_frame_id = "base_footprint";
+    odom_trans.child_frame_id = "base_link";
 
     odom_trans.transform.translation.x = X ;//+ BASE_LINK_TO_WHEELS_X;
     odom_trans.transform.translation.y = Y ;//+ BASE_LINK_TO_WHEELS_Y;
     odom_trans.transform.translation.z = 0.0;
-    odom_trans.transform.rotation = odom_quat;
+    odom_trans.transform.rotation.x = odom_quat.x();
+    odom_trans.transform.rotation.y = odom_quat.y();
+    odom_trans.transform.rotation.z = odom_quat.z();
+    odom_trans.transform.rotation.w = odom_quat.w();
 
     // send the transform
     odom_broadcaster.sendTransform(odom_trans);
     
     odom.header.stamp = current_time;
     odom.header.frame_id = "odom";
-    odom.child_frame_id = "base_footprint";
+    odom.child_frame_id = "base_link";
     odom.pose.pose.position.x = X;
     odom.pose.pose.position.y = Y;
     odom.pose.pose.position.z = 0.0;
-    odom.pose.pose.orientation = odom_quat;
+    odom.pose.pose.orientation.x = odom_quat.x();
+    odom.pose.pose.orientation.y = odom_quat.y();
+    odom.pose.pose.orientation.z = odom_quat.z();
+    odom.pose.pose.orientation.w = odom_quat.w();
 
     odom.twist.twist.linear.x = VX;
     odom.twist.twist.linear.y = VY;
