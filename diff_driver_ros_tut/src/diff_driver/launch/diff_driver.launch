@@ -12,11 +12,12 @@
         name="tf_lidar_base"
         pkg="tf2_ros"
         type="static_transform_publisher"
-        args="-1.94 2.91 124.75 3.1946269621 0 0 base_link laser"/>
-        <!-- args="-1.94 2.91 124.75 0 0 0.05303430856192 base_link laser 30" /> -->
+        args="-0.00194 0.00291 0.12475 3.1946269621 0 0 base_link laser"/> 
+        <!--args="-1.94 2.91 124.75 0 0 0.05303430856192 base_link laser 30" /> -->
     <!-- <node 
         type="rviz" 
         name="rviz" 
         pkg="rviz" 
         args="-d $(find package_name)/rviz/config_file.rviz" /> -->
+
 </launch>
