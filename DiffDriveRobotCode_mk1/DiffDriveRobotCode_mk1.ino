@@ -30,7 +30,8 @@ int oldMillis = 0;
 void cmd_vel_cb(const geometry_msgs::Twist & msg) {
   float x = msg.linear.x;
   float z_rotation = msg.angular.z;
-  x = x * 11 / 0.22;
+  x = map(x, 0, 0.22, 5, 11);
+//  x = x * 11 / 0.22;
   z_rotation = z_rotation / 2.84;
   float speed_wish_right = ( z_rotation * wheelTrack ) / 2 + x;
   float speed_wish_left = x * 2 - speed_wish_right;
