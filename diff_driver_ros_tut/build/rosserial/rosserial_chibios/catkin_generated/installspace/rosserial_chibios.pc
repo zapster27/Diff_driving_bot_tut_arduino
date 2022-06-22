@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/Documents/DiffDriveRobotCode_mk1/diff_driver_ros_tut/install
-
-Name: rosserial_chibios
-Description: Description of rosserial_chibios
-Version: 0.9.2
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

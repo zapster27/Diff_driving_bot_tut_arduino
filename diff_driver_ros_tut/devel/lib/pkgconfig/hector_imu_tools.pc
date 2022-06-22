@@ -1,0 +1,8 @@
+prefix=/home/pi/Documents/Diff_driving_bot_tut_arduino/diff_driver_ros_tut/devel
+
+Name: hector_imu_tools
+Description: Description of hector_imu_tools
+Version: 0.5.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs nav_msgs roscpp sensor_msgs tf
