@@ -36,10 +36,10 @@ void DriverInit() {
   prevTimeRight = millis() + 500;
 }
 
-
-
 void SetSpeedLeft(float speedLeft) {
+  
   currTimeLeft = millis();
+ 
   if (speedLeft == 0) {
     md.setM2Speed(0);
     speedLeftSet = 0;
@@ -48,7 +48,9 @@ void SetSpeedLeft(float speedLeft) {
     rateErrorLeft = 0;
     outLeft = 0;
     
-  } else {
+  } 
+  
+  else {
     Serial2.print("speedLeft    "); Serial2.print(speedLeft);
 
     errorLeft = speedLeft - VLeft;
@@ -79,15 +81,16 @@ void SetSpeedLeft(float speedLeft) {
 
 void SetSpeedRight(float speedRight) {
   currTimeRight = millis();
+  
   if (speedRight == 0) {
     md.setM1Speed(0);
     speedRightSet = 0;
     errorRight = 0;
     cumErrorRight = 0;
     rateErrorRight = 0;
-    outRight = 0;
-    
-  } else {
+    outRight = 0;    
+  } 
+  else {
     errorRight = speedRight - VRight;
     Serial2.print("speedRight    "); Serial2.print(speedRight);
     Serial2.print("    VRight    "); Serial2.print(VRight);
