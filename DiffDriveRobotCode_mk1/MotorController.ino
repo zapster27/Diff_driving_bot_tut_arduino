@@ -50,7 +50,7 @@ void SetSpeedLeft(float speedLeft) {
 //    Serial2.print("speedLeft,"); Serial2.print(speedLeft);
 
     errorLeft = speedLeft - VLeft;
-//    Serial2.print(", VLeft,"); Serial2.print(VLeft);
+    Serial2.print(", VLeft,"); Serial2.print(VLeft);
     cumErrorLeft += errorLeft * ((double)(currTimeLeft - prevTimeLeft)/1000);
     rateErrorLeft = (errorLeft - prevErrorLeft) / ((double)(currTimeLeft - prevTimeLeft)/1000);
 
@@ -88,7 +88,7 @@ void SetSpeedRight(float speedRight) {
   } else {
     errorRight = speedRight - VRight;
 //    Serial2.print("speedRight    "); Serial2.print(speedRight);
-    /*Serial2.print("    VRight    ")*/; Serial2.println(VRight);
+    Serial2.print("    VRight    "); Serial2.println(VRight);
     cumErrorRight += errorRight * ((double)(currTimeRight - prevTimeRight)/1000);
     rateErrorRight = (errorRight - prevErrorRight) / ((double)(currTimeRight - prevTimeRight)/1000);
 

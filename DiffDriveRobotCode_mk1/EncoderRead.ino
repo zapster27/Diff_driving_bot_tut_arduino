@@ -1,5 +1,5 @@
-#define RH_ENCODER_A 3
-#define RH_ENCODER_B 24
+#define RH_ENCODER_A 18
+#define RH_ENCODER_B 3
 #define LH_ENCODER_A 19
 #define LH_ENCODER_B 22
 
@@ -40,12 +40,12 @@ void EncoderInit() {
 // encoder event for the interrupt callS
 void leftEncoderEvent() {
   if (digitalRead(LH_ENCODER_B) > 0) {
-    leftCount++;
-  } else {
     leftCount--;
+  } else {
+    leftCount++;
   }
-  //  Serial2.print("leftCount   "); Serial2.print(leftCount);
-  //  Serial2.print("    rightCount   "); Serial2.println(rightCount);
+//    Serial2.print("leftCount   "); Serial2.print(leftCount);
+//    Serial2.print("    rightCount   "); Serial2.println(rightCount);
 }
 
 void rightEncoderEvent() {
@@ -54,8 +54,8 @@ void rightEncoderEvent() {
   } else {
     rightCount++;
   }
-  //  Serial2.print("leftCount   "); Serial2.print(leftCount);
-  //  Serial2.print("    rightCount   "); Serial2.println(rightCount);
+//    Serial2.print("leftCount   "); Serial2.print(leftCount);
+//    Serial2.print("    rightCount   "); Serial2.println(rightCount);
 }
 
 void Timer_Isr() {
